@@ -642,22 +642,33 @@ function playSet(set,onEnd){
   const rate=set.lvl<=2?.88:.95;
   const fallback=()=>speakLines(set.lines,onEnd,rate);
   if(!set.id){fallback();return}
-  /* One MP3 per line: audios/<id>-01.mp3, -02.mp3 ... (ElevenLabs). Falls back to device voice if missing. */
+  /* 1) One MP3 per audio: audios/<id>.mp3 (ElevenLabs, already joined).
+     2) If missing, one MP3 per line: audios/<id>-01.mp3, -02.mp3 ...
+     3) If missing, device voice. */
   const pad=n=>String(n).padStart(2,"0");
-  let i=0;
-  const next=()=>{
-    if(!playing) return;
-    if(i>=set.lines.length){mp3=null;onEnd();return}
-    const first=i===0;
-    mp3=new Audio("audios/"+set.id+"-"+pad(i+1)+".mp3");i++;
-    let started=false;
-    mp3.onplaying=()=>{started=true};
-    mp3.onended=()=>setTimeout(next,450);
-    const fail=()=>{mp3=null;if(!playing)return;if(first&&!started)fallback();else setTimeout(next,200)};
-    mp3.onerror=fail;
-    mp3.play().catch(()=>{if(!started)fail()});
+  const perLine=()=>{
+    let i=0;
+    const next=()=>{
+      if(!playing) return;
+      if(i>=set.lines.length){mp3=null;onEnd();return}
+      const first=i===0;
+      mp3=new Audio("audios/"+set.id+"-"+pad(i+1)+".mp3");i++;
+      let started=false;
+      mp3.onplaying=()=>{started=true};
+      mp3.onended=()=>setTimeout(next,450);
+      const fail=()=>{mp3=null;if(!playing)return;if(first&&!started)fallback();else setTimeout(next,200)};
+      mp3.onerror=fail;
+      mp3.play().catch(()=>{if(!started)fail()});
+    };
+    next();
   };
-  next();
+  mp3=new Audio("audios/"+set.id+".mp3");
+  let started=false;
+  mp3.onplaying=()=>{started=true};
+  mp3.onended=()=>{mp3=null;onEnd()};
+  const fail=()=>{mp3=null;if(!playing||started)return;perLine()};
+  mp3.onerror=fail;
+  mp3.play().catch(()=>{if(!started)fail()});
 }
 
 /* ============ Views ============ */
