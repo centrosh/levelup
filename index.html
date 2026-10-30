@@ -269,7 +269,7 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--sand);outline-o
 .dlbtn.nx{display:block;width:100%;border:0;border-radius:14px;padding:15px;font:600 16px Poppins,var(--sans);background:#1F2E3A;color:#fff}
 .dlbtn.nx:disabled{opacity:.3;cursor:not-allowed}
 .qwrap .passage{border:0;border-radius:26px;box-shadow:0 12px 34px rgba(31,46,58,.09);padding:24px 26px;top:92px}
-.qwrap .passage .ptag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#6B7A84;margin-bottom:6px}
+.qwrap .passage .ptag{display:block;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#6B7A84;margin-bottom:6px}
 .qwrap .passage h4{font-family:Poppins,var(--sans);font-weight:700;font-size:22px;color:#1F2E3A;padding-bottom:12px;border-bottom:3px solid var(--c);display:inline-block}
 .qwrap .passage p{font-family:var(--sans);font-size:17px;line-height:1.7;color:#2E3D48}
 .qwrap .player{border:0;border-radius:26px;box-shadow:0 12px 34px rgba(31,46,58,.09);padding:18px 22px}
@@ -292,6 +292,27 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--sand);outline-o
   .qwrap .opt{font-size:16px}
   .qwrap .passage{padding:20px 18px;border-radius:22px}
 }
+.opts.pics{grid-template-columns:repeat(3,1fr);gap:10px}
+.qwrap .opt.pic,.example .opt.pic{flex-direction:column;align-items:stretch;justify-content:flex-start;padding:8px;min-height:0;position:relative;gap:0}
+.opt.pic img{display:block;width:100%;aspect-ratio:4/3;object-fit:contain;border-radius:10px;background:#FBF7EE}
+.opt.pic .k{position:absolute;top:8px;left:8px;z-index:1}
+.bigword{font-family:Poppins,var(--sans);font-size:46px;font-weight:800;text-align:center;margin:6px 0 18px;color:#1F2E3A;letter-spacing:.5px}
+.scene img{display:block;width:100%;max-width:440px;margin:4px auto 16px;border-radius:16px;aspect-ratio:4/3;object-fit:cover}
+.passage .pimg{display:block;width:100%;border-radius:14px;margin:4px 0 14px;aspect-ratio:4/3;object-fit:cover}
+.ines{font-size:13.5px;color:#7A8590;font-weight:500}
+.kids .passage p{font-size:18px;line-height:1.6}
+.kids .prompt{font-size:21px}
+.example{position:relative;z-index:1;margin:18px auto 4px;max-width:460px;text-align:left;border:2px dashed #D6DCE0;border-radius:18px;padding:14px 14px 10px;background:#FBFAF7}
+.example .extag{display:inline-block;background:#1F2E3A;color:#fff;font:700 11px Poppins,sans-serif;letter-spacing:.12em;text-transform:uppercase;border-radius:99px;padding:4px 10px}
+.example .exins{font-size:14px;color:#4A5763;margin:8px 0 10px}
+.example .opts{pointer-events:none}
+.example .opt{justify-content:flex-start;text-align:left;font-family:Poppins,var(--sans);font-size:15px;padding:10px 12px;min-height:0;border:1.5px solid #E6E9EC;border-radius:14px}
+.example .opt[aria-pressed="true"]{border-color:var(--c,#8DB596);background:#F1F7F2}
+.example .bigword{font-size:34px;margin:2px 0 10px}
+.example .scene img{max-width:300px;margin-bottom:10px}
+.example .exnote{font-size:12.5px;color:#7A8590;margin:8px 0 0;text-align:center}
+
+@media (max-width:520px){.bigword{font-size:38px}.opts.pics{gap:7px}}
 </style>
 </head>
 <body>
@@ -356,7 +377,67 @@ const VOCAB=[
 [5,"The results were ___ ; they didn’t prove anything either way.",["inconclusive","indispensable","inevitable","infallible"]],
 [5,"The scandal seriously ___ the company’s reputation.",["tarnished","polished","varnished","furnished"]],
 [5,"She has an almost ___ knowledge of art history; she seems to know everything.",["encyclopedic","elementary","superficial","scarce"]],
-[5,"The plan was met with widespread ___ from teachers and parents.",["criticism","critic","critical","criticize"]]
+[5,"The plan was met with widespread ___ from teachers and parents.",["criticism","critic","critical","criticize"]],
+[1,"I brush my ___ after every meal.",["teeth","hands","shoes","plates"]],
+[1,"My sister’s son is my ___ .",["nephew","niece","cousin","uncle"]],
+[1,"You can buy bread at the ___ .",["bakery","library","bank","post office"]],
+[1,"It’s raining. Take an ___ .",["umbrella","sunglasses","towel","ice cream"]],
+[1,"There are seven days in a ___ .",["week","month","year","weekend"]],
+[1,"My phone is very old. I want a ___ one.",["new","old","slow","broken"]],
+[1,"I drink orange ___ for breakfast.",["juice","bread","soup","cheese"]],
+[1,"A doctor works in a ___ .",["hospital","school","restaurant","bank"]],
+[1,"I can’t see anything. Please turn ___ the light.",["on","off","up","in"]],
+[1,"We use ___ to cut paper.",["scissors","a spoon","a pencil","a towel"]],
+[1,"July is the month after ___ .",["June","May","August","January"]],
+[1,"It’s two o’clock in the afternoon. Let’s have ___ .",["lunch","breakfast","bed","morning"]],
+[2,"Could you ___ the dishes after dinner?",["do","make","take","put"]],
+[2,"I’m not feeling well. I think I have a ___ .",["cold","cool","coat","hot"]],
+[2,"The store ___ at nine and closes at eight.",["opens","starts","turns on","goes"]],
+[2,"We stayed at a ___ near the beach.",["hotel","hospital","station","factory"]],
+[2,"He’s very ___ . He never tells lies.",["honest","funny","shy","lazy"]],
+[2,"Please ___ the form and sign it at the bottom.",["fill in","fill up","write down","take in"]],
+[2,"I ___ a lot of money on clothes last month.",["spent","paid","cost","bought"]],
+[2,"She’s very ___ in learning Japanese.",["interested","interesting","bored","excited"]],
+[2,"Hurry up! We’re going to be ___ for class.",["late","early","slow","fast"]],
+[2,"I have a terrible ___ . My head really hurts.",["headache","stomachache","toothache","backache"]],
+[2,"Can I ___ your charger? Mine is broken.",["borrow","lend","give","keep"]],
+[2,"The museum is ___ the bank and the post office.",["between","among","next","across"]],
+[3,"I can’t ___ that he spent all his money on video games.",["believe","agree","trust","doubt about"]],
+[3,"Could you turn the music ___ ? I’m trying to study.",["down","off to","under","low"]],
+[3,"She ___ her mother; they have the same eyes and smile.",["takes after","looks after","takes over","looks up to"]],
+[3,"The flight was cancelled because of bad ___ .",["weather","climate","season","temperature"]],
+[3,"I’ll ___ you up at the airport at six.",["pick","take","get","bring"]],
+[3,"It was a difficult ___ , but we chose the smaller apartment.",["decision","election","opinion","advice"]],
+[3,"Could you do me a ___ and close the window?",["favor","help","service","kindness"]],
+[3,"The ___ of living in this city has increased a lot.",["cost","price","value","fee"]],
+[3,"We ran ___ of milk, so I went to the store.",["out","off","away","over"]],
+[3,"My grandmother is ___ to cats, so she can’t have one.",["allergic","afraid","nervous","sick"]],
+[3,"I’ve been working all day. I’m completely ___ .",["exhausted","exhausting","excited","relaxing"]],
+[3,"He finally ___ the courage to ask her out.",["found","caught","took","made"]],
+[4,"The company plans to ___ 200 new employees next year.",["hire","rent","lend","charge"]],
+[4,"She ___ a good impression on the interviewers.",["made","did","gave","took"]],
+[4,"The meeting was called ___ because the director was ill.",["off","out","up","in"]],
+[4,"There has been a sharp ___ in unemployment this year.",["rise","raise","arise","rising up"]],
+[4,"The new manager has ___ several changes to the schedule.",["introduced","produced","induced","reduced"]],
+[4,"I’m afraid I can’t ___ to buy a new car right now.",["afford","allow","offer","spend"]],
+[4,"Scientists are still trying to find a ___ for the disease.",["cure","heal","recover","therapy to"]],
+[4,"It took her months to ___ from the injury.",["recover","cure","heal up","repair"]],
+[4,"He was ___ injured in the accident and spent a month in hospital.",["seriously","heavily","strongly","highly"]],
+[4,"It’s hard to ___ a balance between work and family life.",["strike","hit","make","beat"]],
+[4,"Unfortunately, the movie didn’t ___ up to our expectations.",["live","come","match","meet"]],
+[4,"She was ___ of stealing money from the company.",["accused","blamed","charged","arrested"]],
+[5,"The documentary offers a ___ portrait of life in the Arctic.",["vivid","livid","vital","valid"]],
+[5,"His ___ remarks offended many people at the dinner.",["tactless","tactful","tactical","tactile"]],
+[5,"The government has pledged to ___ extreme poverty within a decade.",["eradicate","evaporate","erode","evacuate"]],
+[5,"The negotiations reached a ___ , with neither side willing to compromise.",["stalemate","milestone","landmark","breakthrough"]],
+[5,"The new policy is likely to have far-___ consequences.",["reaching","going","standing","stretching"]],
+[5,"His first novel received ___ reviews; critics loved it.",["glowing","burning","shining","flaming"]],
+[5,"We must not ___ the importance of early childhood education.",["underestimate","undermine","undergo","undertake"]],
+[5,"The witness’s account was ___ by video footage from the scene.",["corroborated","collaborated","corrupted","coordinated"]],
+[5,"After decades of ___ , the two countries finally signed a peace treaty.",["hostility","hospitality","humility","hostage"]],
+[5,"The speaker’s ___ voice made it hard to stay awake.",["monotonous","melodious","momentous","monumental"]],
+[5,"She managed to ___ her fear and speak in front of the crowd.",["overcome","overtake","overlook","overdo"]],
+[5,"The report paints a rather ___ picture of the economy’s future.",["bleak","bland","blunt","blank"]]
 ];
 
 const GRAMMAR=[
@@ -409,7 +490,57 @@ const GRAMMAR=[
 [5,"Little ___ that his life was about to change.",["did he know","he knew","knew he","he did know"]],
 [5,"Were the government ___ taxes, there would be protests.",["to raise","raising","raised","raise"]],
 [5,"So complex ___ that few people understood it.",["was the problem","the problem was","the problem","was problem"]],
-[5,"He is said ___ a fortune in the 1990s.",["to have made","to make","having made","that he made"]]
+[5,"He is said ___ a fortune in the 1990s.",["to have made","to make","having made","that he made"]],
+[1,"My sister ___ two children.",["has","have","is","are"]],
+[1,"___ is your name?",["What","Who","Where","How"]],
+[1,"We ___ hungry. Let’s eat.",["are","is","am","be"]],
+[1,"He ___ to work every morning.",["walks","walk","walking","is walk"]],
+[1,"There ___ a big park near my house.",["is","are","have","be"]],
+[1,"I ___ like horror movies.",["don’t","doesn’t","not","isn’t"]],
+[1,"The keys are ___ the table.",["on","in","at","to"]],
+[1,"Can you help ___ , please?",["me","I","my","mine"]],
+[1,"My birthday is ___ May 5th.",["on","in","at","by"]],
+[1,"How ___ brothers do you have?",["many","much","old","long"]],
+[2,"I ___ to Cancún three times.",["have been","went","was","have gone to"]],
+[2,"He has ___ finished his homework, so he can go out.",["already","yet","ever","still"]],
+[2,"I’m going to the store ___ some milk.",["to buy","for buy","buying","for to buy"]],
+[2,"She can’t come because she ___ a cold.",["has","have","is","does"]],
+[2,"My bag is heavier ___ yours.",["than","that","as","then"]],
+[2,"We didn’t ___ the movie. It was boring.",["enjoy","enjoyed","enjoying","to enjoy"]],
+[2,"You ___ finish it today. You can do it tomorrow.",["don’t have to","mustn’t","haven’t to","have to"]],
+[2,"Look at those clouds! It ___ rain.",["is going to","will to","goes to","is going"]],
+[2,"She is ___ girl in the class.",["the tallest","the taller","tallest","most tall"]],
+[2,"When I was a child, I ___ play outside every day.",["used to","use to","was used to","am used to"]],
+[3,"If I see him, I ___ him the news.",["’ll tell","told","would told","tell to"]],
+[3,"The museum ___ by millions of tourists every year.",["is visited","visits","is visiting","has visit"]],
+[3,"He told me that he ___ tired.",["was","were","be","being"]],
+[3,"I’ve been waiting here ___ two hours.",["for","since","during","ago"]],
+[3,"She stopped ___ coffee because it kept her awake at night.",["drinking","to drink","drink","drank"]],
+[3,"The book ___ I borrowed from you was really interesting.",["that","who","whose","what"]],
+[3,"You ___ smoke here. It’s a hospital.",["mustn’t","don’t have to","needn’t","may"]],
+[3,"I wonder if she ___ to the party tomorrow.",["will come","come","coming","to come"]],
+[3,"He ___ tennis since he was eight.",["has played","plays","is playing","played"]],
+[3,"We had our car ___ last week.",["repaired","repair","repairing","to repair"]],
+[4,"She suggested ___ to the beach for the weekend.",["going","to go","go","we going"]],
+[4,"I regret ___ him the truth. He was very upset.",["telling","to tell","tell","told"]],
+[4,"By next June, I ___ here for ten years.",["will have worked","will work","have worked","am working"]],
+[4,"I look forward to ___ from you soon.",["hearing","hear","heard","be hearing"]],
+[4,"She can’t ___ the keys. I saw them on the table a minute ago.",["have lost","has lost","lose","lost"]],
+[4,"The house needs ___ before we sell it.",["painting","to paint","paint","painted"]],
+[4,"I’d rather you ___ smoke in the house.",["didn’t","don’t","won’t","not"]],
+[4,"Unless you ___ now, you’ll miss the bus.",["leave","don’t leave","will leave","left"]],
+[4,"He was made ___ the whole report again.",["to write","write","writing","written"]],
+[4,"There’s no point ___ about it now. It’s done.",["in worrying","to worry","worry","for worrying"]],
+[5,"Only after the meeting ___ the full extent of the problem.",["did we realize","we realized","we did realize","realized we"]],
+[5,"___ the bad weather, the event was a great success.",["Despite","Although","In spite","Even though"]],
+[5,"She would rather he ___ her the truth from the start.",["had told","has told","would tell","tells"]],
+[5,"Rarely ___ such a talented young player.",["have I seen","I have seen","did I saw","I saw"]],
+[5,"___ it not been for your help, we would have failed.",["Had","If","Were","Should"]],
+[5,"Should you ___ any questions, please contact our office.",["have","had","having","to have"]],
+[5,"No sooner ___ home than the phone rang.",["had I arrived","I had arrived","did I arrive","I arrived"]],
+[5,"Whatever ___ , don’t give up on your dreams.",["happens","will happen","happen","happening"]],
+[5,"I’d sooner ___ than apologize to him.",["resign","resigning","to resign","resigned"]],
+[5,"Such ___ the noise that nobody could sleep.",["was","were","is being","had"]]
 ];
 
 /* Reading: each text = {lvl,title,paras,qs:[[question,[correct,...]]]} */
@@ -489,7 +620,15 @@ qs:[
 ["What did the study mentioned in the text show?",["People who did a dull task first had more creative ideas afterwards.","People who copied numbers made more mistakes.","Bored people make worse decisions.","Telephone directories improve memory."]],
 ["In paragraph 3, “romanticize” is closest in meaning to:",["idealize","criticize","avoid","measure"]],
 ["What is the author’s view of chronic boredom?",["It can be harmful.","It is good for the soul.","It is extremely rare.","It improves imagination."]],
-["What does the author recommend?",["Using our devices more deliberately","Getting rid of our phones completely","Looking for more tedious jobs","Doing creativity tests regularly"]]]}
+["What does the author recommend?",["Using our devices more deliberately","Getting rid of our phones completely","Looking for more tedious jobs","Doing creativity tests regularly"]]]},
+{lvl:1,title:"A Day at the Market",paras:["My name is Sofía. Every Sunday morning, I go to the market with my grandmother. The market is in the center of our town, and it opens at seven o’clock.","My grandmother always buys fruit and vegetables there. She likes to talk to the sellers, because she knows them all. I usually carry the bags, and she pays.","My favorite part is the end. We always sit at a small table and have hot chocolate and sweet bread. Then we take the bus home together."],qs:[["Who does Sofía go to the market with?",["Her grandmother","Her mother","Her friends","Her sister"]],["When does she go to the market?",["On Sunday mornings","On Saturday afternoons","Every day","On Sunday evenings"]],["What time does the market open?",["At seven o’clock","At six o’clock","At eight o’clock","At nine o’clock"]],["What does Sofía usually do at the market?",["She carries the bags","She pays","She sells fruit","She talks to the sellers"]],["How do they go home?",["By bus","On foot","By car","By bike"]]]},
+{lvl:2,title:"Summer Volunteer Program",notice:true,paras:["Who can join: Young people aged 15 to 19 who want to help in the community during the summer holidays.","What you will do: Help children with reading at the public library, organize games at the park, and clean up green areas on Saturdays.","When: From July 8 to August 16. Volunteers work three mornings a week, from 9:00 to 12:30.","How to apply: Complete the online form before June 20. You will need a letter from a teacher or a parent. All volunteers receive a certificate and a free T-shirt."],qs:[["Who is the program for?",["Teenagers aged 15 to 19","Children who need help with reading","Teachers and parents","Anyone over 19"]],["What do volunteers do on Saturdays?",["Clean up green areas","Read with children","Organize games","Work at the library"]],["How many days a week do volunteers work?",["Three","Five","Two","Seven"]],["What do you need to apply?",["A letter from a teacher or parent","A certificate","A T-shirt","An interview"]],["What is the deadline to apply?",["June 20","July 8","August 16","June 8"]]]},
+{lvl:3,title:"The Rise of Urban Gardens",paras:["In many cities around the world, people are turning rooftops, empty lots and even balconies into small gardens. Some grow vegetables to save money, while others simply enjoy spending time outdoors after a long day at work.","Urban gardens have benefits beyond the food they produce. Plants help cool down buildings in summer and absorb rainwater, which reduces flooding. Community gardens also bring neighbors together: people who had never spoken before now share tools, seeds and advice.","However, urban gardening is not always easy. Space is limited, and in some areas the soil is polluted, so gardeners have to use raised beds with clean soil. Water can also be expensive. Even so, supporters argue that the benefits are worth the effort, and many local governments now offer free workshops to help people get started."],qs:[["According to the text, why do some people start urban gardens?",["To save money or enjoy being outdoors","Because they must by law","To sell vegetables to restaurants","Because they can’t find work"]],["How do plants help buildings?",["They keep them cooler in summer","They make them stronger","They make them cheaper to build","They protect them from noise"]],["What social benefit of community gardens is mentioned?",["Neighbors get to know each other","Children learn math","People pay less rent","Crime disappears completely"]],["Why do some gardeners use raised beds?",["Because the soil may be polluted","Because they look nicer","Because they need less sun","Because water is free"]],["How are some local governments helping?",["By offering free workshops","By giving away land","By paying for water","By building rooftops"]]]},
+{lvl:3,title:"A Lesson from My Grandfather",paras:["When I was twelve, I spent a summer with my grandfather, who repaired old clocks in a small shop. At first, I found it boring. The shop was quiet, and he worked so slowly that I wondered how he ever finished anything.","One afternoon, he gave me a broken clock and told me to fix it. I opened it, took everything apart in ten minutes, and then had no idea how to put it back together. I felt embarrassed, but he just laughed and said, “Now you know why I’m slow.”","For the rest of the summer, he taught me to draw each piece before removing it and to work in order. By August, I had repaired my first clock. I never became a clockmaker, but I still use his method whenever I face a complicated problem."],qs:[["How did the writer feel at the beginning of the summer?",["Bored","Excited","Scared","Proud"]],["What happened when the writer tried to fix the clock?",["They couldn’t put it back together","They fixed it in ten minutes","They lost some pieces","They broke their grandfather’s tools"]],["How did the grandfather react?",["He laughed and explained why he worked slowly","He got angry","He fixed it himself immediately","He sent the writer home"]],["What method did the grandfather teach?",["Drawing each piece and working in order","Working as fast as possible","Reading the instructions first","Asking a customer for help"]],["What is the main idea of the story?",["A patient method can help with complex problems","Clockmaking is a boring job","Children shouldn’t work in shops","Grandparents are always right"]]]},
+{lvl:4,title:"Can Social Media Make Us Lonely?",paras:["Social media platforms promise to keep us connected, and in many ways they do. We can follow the lives of friends who live on the other side of the world and join communities of people who share our interests. Yet a growing number of studies suggest that heavy users often report feeling lonelier, not less.","Researchers believe the explanation lies partly in how we use these platforms. Passively scrolling through other people’s carefully edited photos tends to encourage comparison, which can leave us feeling that our own lives are dull. Active use, such as sending messages or arranging to meet, appears to have the opposite effect.","Another factor is time. Hours spent online may replace face-to-face interaction, which offers things a screen cannot, such as physical presence and shared experiences. The conclusion, then, is not that social media is harmful in itself, but that it works best as a bridge to real-world relationships rather than a substitute for them."],qs:[["What contradiction does the first paragraph point out?",["Platforms promise connection, but heavy users may feel lonelier","People use social media less than they say","Friends abroad prefer letters","Online communities are getting smaller"]],["Why can passive scrolling be harmful?",["It encourages people to compare their lives with others’","It uses too much battery","It shows too many advertisements","It takes away privacy"]],["Which type of use appears to have a positive effect?",["Sending messages and arranging meetings","Watching videos","Reading the news","Posting edited photos"]],["What can face-to-face interaction offer that screens can’t?",["Physical presence and shared experiences","Faster communication","More friends","Better photos"]],["What is the writer’s conclusion?",["Social media is most useful as a bridge to real relationships","Social media should be banned","People should delete their accounts","Online friendships are more valuable"]]]},
+{lvl:4,title:"The Four-Day Week Experiment",paras:["In recent years, several companies have tested a four-day working week, in which employees work fewer hours but receive the same salary. The idea sounds almost too good to be true, so what have these experiments actually shown?","In many trials, productivity stayed the same or even increased. Employees reported less stress and fewer sick days, and companies found it easier to attract and keep talented staff. Managers noted that meetings became shorter and more focused, as teams looked for ways to save time.","Not every sector benefits equally, however. Hospitals, schools and shops need people present every day, so reducing hours there often means hiring more staff, which increases costs. Critics also warn that squeezing five days of work into four can make some days exhausting. For now, the four-day week seems to work best in office-based jobs where results matter more than hours."],qs:[["What is special about the four-day week in these trials?",["Fewer hours with the same salary","Longer days with more pay","Fewer hours with lower pay","Working from home every day"]],["What happened to productivity in many trials?",["It stayed the same or increased","It fell sharply","It was impossible to measure","It improved only for managers"]],["How did meetings change?",["They became shorter and more focused","They were canceled","They became longer","They moved online"]],["Why is the model harder for hospitals and schools?",["They need people present every day","Their staff don’t want it","They already work four days","They have too many employees"]],["What concern do critics raise?",["Some days can become exhausting","Salaries will go down","People will lose their jobs","Companies will close"]]]},
+{lvl:5,title:"The Paradox of Choice",paras:["Conventional wisdom holds that more choice is always better: the more options we have, the more likely we are to find exactly what we want. Yet psychologists have observed that an abundance of options can be paralyzing. In one well-known experiment, shoppers who were offered twenty-four varieties of jam were far less likely to buy any than those offered only six.","The problem is not merely the effort of comparing options. When choices multiply, so do our expectations, and so does the likelihood of regret. Having picked one item from dozens, we are left wondering whether one of the alternatives might have been better, which diminishes our satisfaction with the decision we actually made.","None of this implies that choice is undesirable; few of us would willingly return to a world with a single brand of everything. Rather, the lesson is that beyond a certain point, additional options cease to add value. Some researchers suggest adopting a deliberate strategy: deciding in advance what is “good enough” and stopping the search once that standard has been met."],qs:[["What does the jam experiment illustrate?",["Too many options can discourage people from choosing","People prefer expensive products","Shoppers enjoy comparing options","Six varieties are too few"]],["According to the second paragraph, why do more options reduce satisfaction?",["They raise expectations and make regret more likely","They make products more expensive","They take too much time to compare","They confuse sellers"]],["What is the writer’s position on choice?",["It is valuable, but only up to a point","It should be eliminated","It always leads to regret","It matters only for food"]],["What strategy do some researchers suggest?",["Deciding beforehand what is “good enough”","Always choosing the cheapest option","Asking others to decide","Comparing every option carefully"]],["The word “cease” in the last paragraph is closest in meaning to:",["stop","begin","continue","pretend"]]]},
+{lvl:5,title:"What We Lose When Languages Die",paras:["Linguists estimate that roughly half of the world’s seven thousand languages may disappear by the end of this century. Most are spoken by small communities, and when the last fluent speakers die, the language often goes with them, sometimes without ever having been recorded.","It is tempting to regard this as an inevitable consequence of globalization, perhaps even a convenient one: fewer languages, after all, might make communication easier. But each language encodes a particular way of seeing the world. Some contain detailed knowledge of local plants and their medicinal uses; others distinguish concepts that have no equivalent elsewhere. When a language vanishes, that knowledge is frequently lost as well.","Encouragingly, revitalization efforts have shown that decline is not always irreversible. Hebrew was revived as an everyday spoken language, and communities from Wales to New Zealand have expanded the use of their languages through schools and media. Such successes, however, depend on something no outside expert can provide: the determination of the speakers themselves."],qs:[["What do linguists predict?",["About half of the world’s languages may disappear this century","All small languages will be recorded","Seven thousand new languages will appear","Globalization will slow down"]],["What view does the writer challenge in the second paragraph?",["That language loss is unimportant or even convenient","That globalization exists","That languages contain knowledge","That communication is important"]],["Why is losing a language a loss of knowledge?",["Languages encode unique knowledge and ways of seeing the world","Dictionaries become more expensive","Fewer people can travel","Schools stop teaching history"]],["What do the examples of Hebrew and Wales show?",["Language decline can sometimes be reversed","Only large languages survive","Media harms small languages","Experts can save any language"]],["According to the writer, what is essential for revitalization to succeed?",["The determination of the speakers","Government money","Outside experts","International organizations"]]]}
 ];
 
 /* Listening: speaker W = woman, M = man. audio = optional MP3 path (falls back to device voice) */
@@ -547,7 +686,13 @@ qs:[
 qs:[
 ["What is the man’s position?",["He supports limiting cars if better alternatives come first.","He is against any limits on cars.","He supports an immediate ban on cars.","He doesn’t think traffic is a real problem."]],
 ["What does the man mean by “a false choice”?",["The question oversimplifies the issue into two options.","The question contains wrong information.","People are choosing the wrong transport.","The debate is not important."]],
-["What does the man suggest about Oslo?",["Its success depended on long planning.","It failed to reduce traffic.","It banned cars overnight.","It is not a good example to follow."]]]}
+["What does the man suggest about Oslo?",["Its success depended on long planning.","It failed to reduce traffic.","It banned cars overnight.","It is not a good example to follow."]]]},
+{lvl:1,id:"tya-listening-10",title:"Buying a T-shirt",lines:[["W","Excuse me, do you have this T-shirt in a medium?"],["M","Let me check. Yes, here you are. We have it in blue and in green."],["W","I’ll take the green one, please. How much is it?"],["M","It’s fifteen dollars, but today everything is twenty percent off, so it’s twelve dollars."],["W","Great! Can I pay by card?"],["M","Of course."]],qs:[["What size does the woman want?",["Medium","Small","Large","Extra large"]],["What color does she choose?",["Green","Blue","Black","White"]],["How much does she pay?",["$12","$15","$20","$10"]]]},
+{lvl:2,id:"tya-listening-11",title:"Calling the doctor’s office",lines:[["M","Good morning, Dr. Ramírez’s office. How can I help you?"],["W","Hi, I’d like to make an appointment. I’ve had a sore throat for three days."],["M","Let me see. The doctor is free tomorrow at ten thirty, or on Thursday at four."],["W","Tomorrow is better, but I work until twelve. Is there anything in the afternoon?"],["M","Yes, there’s a cancellation at three fifteen tomorrow."],["W","Perfect, I’ll take it. My name is Sara Torres."]],qs:[["Why does the woman call?",["To make an appointment","To cancel an appointment","To ask about medicine","To speak to Sara"]],["How long has she had a sore throat?",["Three days","Two days","A week","Since yesterday"]],["When is her appointment?",["Tomorrow at 3:15","Tomorrow at 10:30","Thursday at 4:00","Tomorrow at 12:00"]]]},
+{lvl:3,id:"tya-listening-12",title:"A museum tour",lines:[["W","Welcome to the City History Museum. Before we begin, a few quick notes. The tour lasts about an hour and fifteen minutes, and we’ll start on the second floor, where you’ll find our collection of old maps. Please don’t touch the exhibits, and remember that photos are allowed, but without flash. Halfway through the tour, we’ll stop at the café on the ground floor for a short break. And if you lose the group, just wait by the main stairs, and I’ll come and find you."]],qs:[["How long does the tour last?",["About an hour and fifteen minutes","About fifty minutes","About two hours","About half an hour"]],["What is true about taking photos?",["You can take them without flash","They are not allowed","You can only take them in the café","You need to pay extra"]],["What should you do if you lose the group?",["Wait by the main stairs","Go to the café","Call the guide","Go back to the entrance"]]]},
+{lvl:4,id:"tya-listening-13",title:"A job interview",lines:[["M","So, why are you interested in this position?"],["W","Well, I’ve been working in customer service for three years, and I’d like a role where I can also help train new staff. I really enjoy teaching people."],["M","That’s great. Can you tell me about a difficult situation you handled?"],["W","Sure. Once, a customer was furious because his order had arrived damaged. Instead of just apologizing, I called the warehouse, found out what had happened, and sent him a replacement the same day. He ended up writing a positive review."],["M","Impressive. And what would you say is your main weakness?"],["W","I sometimes take on too much myself. I’m learning to delegate more, and it’s made a real difference."]],qs:[["Why is the woman interested in the job?",["She’d like to help train new staff","She wants a higher salary","She doesn’t enjoy customer service","She wants to work from home"]],["What did she do for the angry customer?",["She found out the problem and sent a replacement quickly","She gave him a full refund","She asked her manager to call him","She apologized and did nothing else"]],["How is she dealing with her weakness?",["By learning to delegate","By working longer hours","By taking a course","By avoiding difficult customers"]]]},
+{lvl:5,id:"tya-listening-14",title:"A podcast about sleep",lines:[["M","Most of us treat sleep as something we can cut back on when life gets busy, as if it were a luxury rather than a biological necessity. Yet the research suggests otherwise. When we sleep, the brain isn’t simply switching off; it’s consolidating memories, clearing out waste and regulating our emotions. People who regularly sleep less than six hours are not only more forgetful; they’re also more irritable and more likely to make risky decisions. What’s striking is that they often don’t realize how impaired they are. In one study, participants who had slept poorly for two weeks rated themselves as only slightly tired, while their performance had dropped to the level of someone who hadn’t slept at all for a night. So perhaps the question isn’t whether we can afford to sleep more, but whether we can afford not to."]],qs:[["What attitude toward sleep does the speaker criticize?",["Treating it as a luxury we can reduce","Sleeping too much at weekends","Taking naps during the day","Using sleeping pills"]],["What was surprising about the study?",["Participants didn’t realize how impaired they were","Participants slept more than expected","Participants performed better after two weeks","Participants felt extremely tired"]],["What is the speaker’s conclusion?",["Not sleeping enough has a cost we can’t ignore","Sleep is less important than we think","Most people sleep too much","Only students need more sleep"]]]},
+{lvl:5,id:"tya-listening-15",title:"A discussion about homework",lines:[["M","I’ll be honest: I think homework in primary school does more harm than good. Children spend all day at school, and then they come home and argue with their parents over worksheets."],["W","I see your point, but I think the problem is the type of homework, not homework itself. Reading with a parent for twenty minutes is hardly harmful."],["M","True, but that assumes every child has a parent who’s available and able to help. Homework tends to widen the gap between families who have time and resources and those who don’t."],["W","That’s a fair argument. Still, banning it altogether seems extreme. Couldn’t schools offer homework clubs, so that everyone gets the same support?"]],qs:[["Why does the man think homework can be unfair?",["It favors families with more time and resources","It is too difficult for most children","Teachers don’t check it","It takes too long to correct"]],["According to the woman, what is the real problem?",["The type of homework","The amount of reading","Lazy students","Strict teachers"]],["What does the woman propose?",["Homework clubs at school","Banning homework completely","More homework for older children","Paying parents to help"]]]}
 ];
 
 /* ============ Item banks: Juniors (10–13) ============
@@ -1024,6 +1169,204 @@ qs:[
 ["What is the speaker’s final message?",["Small ideas can help complete bigger ones","Only big ideas matter","Inventing is too difficult for most people","You should keep your ideas secret"]]]}
 ];
 
+/* ============ Item banks: Young Learners (6-9) ============
+   lvl 1 = Pre-A1 · 2 = A1 · 3 = A2 · 4 = B1  (offset 1 al calcular el nivel)
+   t: word = palabra → 3 dibujos · def = oración → 3 dibujos · look = dibujo → 3 oraciones · txt = oración con hueco → 3 opciones
+   La primera opción siempre es la correcta (el examen las revuelve). */
+const YL_VOCAB=[
+{lvl:1,t:"word",q:"apple",opts:["apple","banana","orange"]},
+{lvl:1,t:"word",q:"banana",opts:["banana","grapes","strawberry"]},
+{lvl:1,t:"word",q:"cat",opts:["cat","dog","rabbit"]},
+{lvl:1,t:"word",q:"fish",opts:["fish","bird","frog"]},
+{lvl:1,t:"word",q:"ball",opts:["ball","kite","doll"]},
+{lvl:1,t:"word",q:"book",opts:["book","pencil","ruler"]},
+{lvl:1,t:"word",q:"shoes",opts:["shoes","hat","socks"]},
+{lvl:1,t:"word",q:"sun",opts:["sun","moon","flower"]},
+{lvl:1,t:"word",q:"bus",opts:["bus","train","plane"]},
+{lvl:1,t:"word",q:"chair",opts:["chair","table","bed"]},
+{lvl:1,t:"word",q:"cake",opts:["cake","pizza","bread"]},
+{lvl:1,t:"word",q:"duck",opts:["duck","bird","horse"]},
+{lvl:1,t:"word",q:"hat",opts:["hat","dress","shirt"]},
+{lvl:1,t:"word",q:"flower",opts:["flower","tree","sun"]},
+{lvl:1,t:"word",q:"milk",opts:["milk","egg","cheese"]},
+{lvl:1,t:"word",q:"pencil",opts:["pencil","crayons","scissors"]},
+{lvl:2,t:"word",q:"giraffe",opts:["giraffe","elephant","horse"]},
+{lvl:2,t:"word",q:"umbrella",opts:["umbrella","lamp","clock"]},
+{lvl:2,t:"word",q:"helicopter",opts:["helicopter","plane","boat"]},
+{lvl:2,t:"word",q:"strawberry",opts:["strawberry","grapes","watermelon"]},
+{lvl:2,t:"word",q:"scissors",opts:["scissors","ruler","crayons"]},
+{lvl:2,t:"word",q:"jacket",opts:["jacket","dress","shirt"]},
+{lvl:2,t:"word",q:"monkey",opts:["monkey","lion","rabbit"]},
+{lvl:2,t:"word",q:"guitar",opts:["guitar","clock","lamp"]},
+{lvl:2,t:"word",q:"window",opts:["window","door","table"]},
+{lvl:2,t:"word",q:"carrot",opts:["carrot","banana","cheese"]},
+{lvl:2,t:"word",q:"backpack",opts:["backpack","book","teddy_bear"]},
+{lvl:2,t:"word",q:"watermelon",opts:["watermelon","orange","apple"]},
+{lvl:3,t:"def",q:"You wear these on your feet.",opts:["socks","hat","jacket"]},
+{lvl:3,t:"def",q:"This animal lives in the water.",opts:["fish","cow","lion"]},
+{lvl:3,t:"def",q:"You can read it.",opts:["book","ball","cake"]},
+{lvl:3,t:"def",q:"You can see it in the sky at night.",opts:["moon","sun","flower"]},
+{lvl:3,t:"def",q:"You use it to cut paper.",opts:["scissors","ruler","pencil"]},
+{lvl:3,t:"def",q:"It is cold and sweet.",opts:["ice_cream","pizza","bread"]},
+{lvl:3,t:"def",q:"You sleep in it.",opts:["bed","chair","table"]},
+{lvl:3,t:"def",q:"It tells you the time.",opts:["clock","lamp","window"]},
+{lvl:3,t:"def",q:"This animal says “moo”.",opts:["cow","duck","horse"]},
+{lvl:3,t:"def",q:"It goes on the water.",opts:["boat","bus","train"]},
+{lvl:4,t:"txt",q:"We go to the ___ when we are sick.",opts:["doctor","library","bakery"]},
+{lvl:4,t:"txt",q:"My mom’s mother is my ___.",opts:["grandmother","aunt","sister"]},
+{lvl:4,t:"txt",q:"In winter, it is very ___.",opts:["cold","hot","sunny"]},
+{lvl:4,t:"txt",q:"I brush my ___ every morning.",opts:["teeth","feet","books"]},
+{lvl:4,t:"txt",q:"A ___ is a doctor for animals.",opts:["vet","chef","pilot"]},
+{lvl:4,t:"txt",q:"Take an umbrella. It’s ___ outside.",opts:["raining","sunny","hot"]},
+{lvl:4,t:"txt",q:"The opposite of “big” is ___.",opts:["small","tall","happy"]},
+{lvl:4,t:"txt",q:"I’m ___. Can I have a sandwich, please?",opts:["hungry","tired","cold"]},
+{lvl:4,t:"txt",q:"There are twelve ___ in a year.",opts:["months","days","weeks"]},
+{lvl:4,t:"txt",q:"You can borrow books at the ___.",opts:["library","swimming pool","supermarket"]}
+];
+
+const YL_GRAMMAR=[
+{lvl:1,t:"look",img:"cat_under_table",opts:["The cat is under the table.","The cat is on the table.","The cat is next to the door."]},
+{lvl:1,t:"look",img:"ball_on_chair",opts:["The ball is on the chair.","The ball is under the chair.","The ball is in the box."]},
+{lvl:1,t:"look",img:"bird_in_tree",opts:["The bird is in the tree.","The bird is under the tree.","The bird is on the car."]},
+{lvl:1,t:"look",img:"three_apples",opts:["There are three apples.","There is one apple.","There are two apples."]},
+{lvl:1,t:"look",img:"two_dogs",opts:["There are two dogs.","There is one dog.","There are three cats."]},
+{lvl:1,t:"look",img:"sad_boy",opts:["He is sad.","He is happy.","She is sad."]},
+{lvl:1,t:"look",img:"dog_in_box",opts:["The dog is in the box.","The dog is under the box.","The cat is in the box."]},
+{lvl:1,t:"look",img:"elephant",opts:["It’s an elephant.","It’s a lion.","They’re elephants."]},
+{lvl:1,t:"look",img:"giraffe",opts:["The giraffe is tall.","The giraffe is short.","The giraffes is tall."]},
+{lvl:1,t:"look",img:"baby_sleeping",opts:["The baby is sleeping.","The baby is eating.","The baby is running."]},
+{lvl:2,t:"look",img:"girl_swim",opts:["She is swimming.","She is reading.","He is swimming."]},
+{lvl:2,t:"look",img:"girl_bike",opts:["She is riding a bike.","She is riding a horse.","She riding a bike."]},
+{lvl:2,t:"look",img:"girl_read",opts:["She is reading a book.","She is writing a book.","They are reading."]},
+{lvl:2,t:"look",img:"boy_kite",opts:["He is flying a kite.","He is playing soccer.","He are flying a kite."]},
+{lvl:2,t:"look",img:"boy_eating",opts:["He is eating a sandwich.","He is eating an apple.","He eat a sandwich."]},
+{lvl:2,t:"look",img:"kids_soccer",opts:["They are playing soccer.","They is playing soccer.","They are playing basketball."]},
+{lvl:2,t:"look",img:"dad_cooking",opts:["He is cooking.","He is sleeping.","She is cooking."]},
+{lvl:2,t:"look",img:"kids_singing",opts:["They are singing.","They are sleeping.","He is singing."]},
+{lvl:2,t:"look",img:"girl_painting",opts:["She is painting.","She is dancing.","She are painting."]},
+{lvl:2,t:"look",img:"boy_running",opts:["He is running.","He is swimming.","He is sitting."]},
+{lvl:3,t:"look",img:"elephant_mouse",opts:["The elephant is bigger than the mouse.","The mouse is bigger than the elephant.","The elephant is big than the mouse."]},
+{lvl:3,t:"look",img:"tall_short",opts:["The boy is taller than the girl.","The girl is taller than the boy.","The boy is more tall than the girl."]},
+{lvl:3,t:"look",img:"cat_sleeping",opts:["The cat is sleeping on a cushion.","The cat is jumping on a cushion.","The cats is sleeping."]},
+{lvl:3,t:"look",img:"girls_dancing",opts:["The girls are dancing.","The girl is dancing.","The girls is dancing."]},
+{lvl:3,t:"txt",q:"I ___ a brother and a sister.",opts:["have","has","am"]},
+{lvl:3,t:"txt",q:"___ you like pizza?",opts:["Do","Does","Are"]},
+{lvl:3,t:"txt",q:"My sister ___ ten years old.",opts:["is","are","am"]},
+{lvl:3,t:"txt",q:"We ___ swim very well.",opts:["can","cans","are"]},
+{lvl:3,t:"txt",q:"Look! It ___ raining.",opts:["is","are","am"]},
+{lvl:3,t:"txt",q:"He ___ like carrots.",opts:["doesn’t","don’t","isn’t"]},
+{lvl:3,t:"txt",q:"Where ___ your shoes?",opts:["are","is","am"]},
+{lvl:4,t:"txt",q:"Yesterday I ___ to the park with my dad.",opts:["went","go","goes"]},
+{lvl:4,t:"txt",q:"My dog is ___ than your dog.",opts:["bigger","biggest","more big"]},
+{lvl:4,t:"txt",q:"Did you ___ the cake?",opts:["eat","ate","eating"]},
+{lvl:4,t:"txt",q:"There isn’t ___ milk in the fridge.",opts:["any","some","a"]},
+{lvl:4,t:"txt",q:"She ___ her homework every day.",opts:["does","do","doing"]},
+{lvl:4,t:"txt",q:"We are ___ to visit Grandma tomorrow.",opts:["going","go","went"]},
+{lvl:4,t:"txt",q:"This is the ___ day of my life!",opts:["best","good","better"]},
+{lvl:4,t:"txt",q:"I ___ watching TV when Mom called.",opts:["was","were","am"]},
+{lvl:4,t:"txt",q:"You ___ run near the pool. It’s dangerous.",opts:["mustn’t","can","have"]},
+{lvl:4,t:"txt",q:"How ___ water do you drink every day?",opts:["much","many","long"]},
+{lvl:4,t:"txt",q:"I have ___ been to Cancún. I want to go!",opts:["never","ever","yet"]},
+{lvl:4,t:"txt",q:"If it rains, we ___ stay at home.",opts:["will","would","are"]},
+{lvl:4,t:"txt",q:"She has lived in this house ___ 2020.",opts:["since","for","ago"]}
+];
+
+const YL_READING=[
+{lvl:1,title:"My Dog",img:"dog",paras:["This is my dog. His name is Spot.","Spot is brown. He is five years old.","Spot likes balls. He doesn’t like cats!"],
+qs:[["What is the dog’s name?",["Spot","Max","Tom"]],
+["What color is Spot?",["brown","black","white"]],
+["How old is Spot?",["five","four","six"]],
+["What does Spot like?",["ball","cat","book"],"pic"]]},
+{lvl:1,title:"Anna and Her Books",img:"girl_read",paras:["This is Anna. She is seven.","Anna likes books. She reads every day.","Her favorite book is about a cat."],
+qs:[["How old is Anna?",["seven","six","eight"]],
+["What does Anna like?",["book","ball","kite"],"pic"],
+["When does Anna read?",["every day","on Saturdays","at school"]],
+["Her favorite book is about a…",["cat","dog","fish"],"pic"]]},
+{lvl:1,title:"Breakfast Time",img:"breakfast",paras:["It is seven o’clock. Lily and her dad are in the kitchen.","Lily has milk and an egg. Dad has bread and cheese.","Lily is happy. She likes breakfast!"],
+qs:[["Who is in the kitchen?",["Lily and her dad","Lily and her mom","Lily and her cat"]],
+["What time is it?",["seven o’clock","eight o’clock","six o’clock"]],
+["What does Lily have?",["egg","carrot","ice_cream"],"pic"],
+["How does Lily feel?",["happy","sad","tired"]]]},
+{lvl:2,title:"At the Beach",img:"beach",paras:["It’s Saturday and it’s very hot. Ben and his family are at the beach.","Ben’s sister is swimming in the sea. His mom is reading a book under a big umbrella.","Ben is building a sandcastle with his dad. Later, they are going to eat ice cream."],
+qs:[["What’s the weather like?",["hot","cold","rainy"]],
+["What is Ben’s sister doing?",["swimming","reading","eating"]],
+["Where is Ben’s mom?",["under an umbrella","in the sea","in the car"]],
+["What are they going to eat later?",["ice_cream","pizza","sandwich"],"pic"]]},
+{lvl:2,title:"Mia’s Birthday",img:"birthday",paras:["Today is Mia’s birthday. She is eight years old.","Her friends are at her house. There is a big chocolate cake with eight candles.","Mia’s grandma gives her a present. It’s a new kite! Mia wants to fly it in the park tomorrow."],
+qs:[["How old is Mia today?",["eight","seven","nine"]],
+["What kind of cake is it?",["chocolate","strawberry","banana"]],
+["Who gives Mia a present?",["her grandma","her friends","her dad"]],
+["What is the present?",["kite","doll","bike"],"pic"]]},
+{lvl:2,title:"Lucy’s Busy Week",img:"girl_bike",paras:["Lucy is nine. She is very busy!","On Mondays and Wednesdays, she swims at the pool. On Tuesdays, she has a guitar class.","On Saturdays, she rides her bike in the park with her brother. On Sundays, she visits her grandparents."],
+qs:[["When does Lucy swim?",["On Mondays and Wednesdays","On Tuesdays","On Sundays"]],
+["What does she play on Tuesdays?",["guitar","ball","kite"],"pic"],
+["Who rides with her on Saturdays?",["her brother","her grandparents","her friend"]],
+["What does she do on Sundays?",["She visits her grandparents.","She swims.","She plays the guitar."]]]},
+{lvl:3,title:"Tom’s Windy Saturday",img:"boy_kite",paras:["Last Saturday was very windy, so Tom and his dad went to the park with Tom’s new kite. It was red and blue.","At first, the kite didn’t fly. It fell down three times! Tom was sad, but his dad helped him. They ran together, and the kite went up high into the sky.","Tom was very happy. Now he wants to go back to the park every windy day."],
+qs:[["Why did Tom go to the park?",["It was windy, so he wanted to fly his kite","He wanted to play soccer","His friends were there"]],
+["What colors was the kite?",["red and blue","red and yellow","green and blue"]],
+["How many times did the kite fall?",["three","two","four"]],
+["Who helped Tom?",["his dad","his mom","his friend"]]]},
+{lvl:3,title:"A Week on the Farm",img:"farm",paras:["Last summer, Sofia stayed with her uncle on his farm for a week.","Every morning, she got up early to feed the chickens and the ducks. In the afternoon, she rode a horse called Star.","Her favorite animal was a little brown cow. Sofia gave it a name: Chocolate! She wants to go back next summer."],
+qs:[["How long did Sofia stay on the farm?",["a week","a month","a day"]],
+["What did she do every morning?",["She fed the chickens and ducks.","She rode a horse.","She went swimming."]],
+["What is Star?",["horse","cow","duck"],"pic"],
+["Why did Sofia call the cow “Chocolate”?",["Because it was brown","Because it liked chocolate","Because it was small"]]]},
+{lvl:4,title:"The Lost Puppy",img:"girl_puppy",paras:["On her way home from school, Emma heard a small sound behind some bushes. It was a little white puppy, and it looked cold and scared.","Emma took the puppy home and gave it some water. Her mom said, “It probably belongs to someone. Let’s try to find its family.”","They put up posters with a photo of the puppy all around the neighborhood. Two days later, a boy called Leo knocked on the door. “That’s my puppy, Snowy!” he shouted. He was so happy that he hugged Emma."],
+qs:[["Where did Emma find the puppy?",["behind some bushes","at school","in the park"]],
+["How did the puppy look?",["cold and scared","happy and hungry","big and dirty"]],
+["Why did they put up posters?",["To find the puppy’s family","To sell the puppy","To find a new pet"]],
+["How did Leo feel when he saw Snowy?",["very happy","angry","worried"]]]},
+{lvl:4,title:"A Class Trip to the Zoo",img:"zoo",paras:["Last Friday, Daniel’s class visited the zoo. Their teacher gave each group a worksheet with questions about the animals.","Daniel’s group went to see the giraffes first. A zookeeper told them that giraffes sleep only about two hours a day! Then they watched the monkeys, which were playing and making a lot of noise.","At the end of the day, Daniel’s group was the first to finish all the questions, so they won a prize: a book about wild animals."],
+qs:[["Why did the teacher give them a worksheet?",["To answer questions about the animals","To draw the animals","To buy tickets"]],
+["What surprised the group about giraffes?",["They sleep very little.","They eat meat.","They can swim."]],
+["What were the monkeys doing?",["playing and making noise","sleeping","eating bananas"]],
+["Why did Daniel’s group win a prize?",["They finished the questions first.","They saw the most animals.","They were the quietest group."]]]}
+];
+
+const YL_LISTENING=[
+{lvl:1,id:"yl-listening-01",title:"Sam’s toys",lines:[["M","Hi! I’m Sam. I’m six. This is my red ball. I play with it every day. My sister has a teddy bear. She sleeps with it every night. And my dog? My dog likes my ball too!"]],
+qs:[["What does Sam have?",["ball","kite","doll"],"pic"],
+["What does Sam’s sister have?",["teddy_bear","doll","toy_car"],"pic"],
+["How old is Sam?",["six","seven","five"]]]},
+{lvl:1,id:"yl-listening-02",title:"I’m hungry!",lines:[["M","Mom, I’m hungry!"],["W","Do you want a banana?"],["M","No, thank you. Can I have an apple?"],["W","Yes, here you are. And some milk?"],["M","Yes, please! Thanks, Mom!"]],
+qs:[["What fruit does the boy want?",["apple","banana","orange"],"pic"],
+["What does he drink?",["milk","cake","cheese"],"pic"],
+["Who is talking with the boy?",["his mom","his dad","his teacher"]]]},
+{lvl:1,id:"yl-listening-03",title:"On the farm",lines:[["W","Look! This is my uncle’s farm. There are three cows and five ducks. There’s a big brown horse, too. I love the horse! His name is Star."]],
+qs:[["How many cows are there?",["three","five","two"]],
+["Which animal does she love?",["horse","cow","duck"],"pic"],
+["What is the horse’s name?",["Star","Sun","Spot"]]]},
+{lvl:2,id:"yl-listening-04",title:"The weather today",lines:[["W","Good morning, boys and girls! Here is the weather for today. In the morning, it’s sunny and hot, so wear a hat. But in the afternoon, it’s going to rain. Don’t forget your umbrella!"]],
+qs:[["What’s the weather like in the morning?",["sunny and hot","cold","rainy"]],
+["What should you wear in the morning?",["hat","jacket","socks"],"pic"],
+["What do you need in the afternoon?",["umbrella","lamp","ball"],"pic"]]},
+{lvl:2,id:"yl-listening-05",title:"Lucy’s Saturday",lines:[["W","Hi, I’m Lucy. On Saturdays, I go swimming with my mom. I don’t ride my bike on Saturdays, because the park is very busy. In the afternoon, I read a book about animals. I love Saturdays!"]],
+qs:[["What does Lucy do on Saturday mornings?",["girl_swim","girl_bike","girl_read"],"pic"],
+["Who goes with her?",["her mom","her dad","her friend"]],
+["What is her book about?",["animals","cars","planets"]]]},
+{lvl:2,id:"yl-listening-06",title:"The lost backpack",lines:[["M","Miss, I can’t find my backpack!"],["W","Oh no! What color is it?"],["M","It’s blue, with a yellow star."],["W","Is it this one, under the table?"],["M","Yes, that’s it! Thank you, Miss!"]],
+qs:[["What did the boy lose?",["backpack","book","jacket"],"pic"],
+["What color is it?",["blue with a yellow star","yellow with a blue star","red and blue"]],
+["Where is it?",["under the table","on the chair","on the bus"]]]},
+{lvl:3,id:"yl-listening-07",title:"A school trip",lines:[["W","Listen, everyone. Tomorrow we’re going to the zoo by bus. Please be at school at eight o’clock. Bring a sandwich, some water and a hat, because it’s going to be sunny. We’re coming back to school at two o’clock."]],
+qs:[["How are they going to the zoo?",["bus","train","plane"],"pic"],
+["What time should they be at school?",["at eight o’clock","at two o’clock","at nine o’clock"]],
+["What should they bring?",["a sandwich, water and a hat","a jacket and an umbrella","a book and a pencil"]]]},
+{lvl:3,id:"yl-listening-08",title:"At the pet shop",lines:[["W","Hello! Can I help you?"],["M","Yes, please. I want a pet, but my mom says no dogs and no cats."],["W","How about a fish? Fish are quiet, and they’re easy to look after."],["M","Hmm, I’d prefer a rabbit. Do you have rabbits?"],["W","Yes, we do. We have a white one and a black one."],["M","Great! I’ll take the white one, please!"]],
+qs:[["Which pets can’t the boy have?",["dogs and cats","fish","rabbits"]],
+["Which pet does he choose?",["rabbit","fish","cat"],"pic"],
+["What color is it?",["white","black","brown"]]]},
+{lvl:4,id:"yl-listening-09",title:"Learning the guitar",lines:[["M","Last year, I started playing the guitar. At first, it was really difficult, and my fingers hurt a lot! But my teacher told me to practice for just ten minutes every day. Now I can play five songs, and next month I’m going to play in the school concert."]],
+qs:[["Why was the guitar difficult at first?",["His fingers hurt.","The guitar was too big.","He didn’t have a teacher."]],
+["What did his teacher tell him to do?",["Practice ten minutes every day","Learn five songs a week","Stop for a while"]],
+["What is he going to do next month?",["Play in a school concert","Buy a new guitar","Start a piano class"]]]},
+{lvl:4,id:"yl-listening-10",title:"A recycling project",lines:[["W","So, Diego, what did your group find out about recycling?"],["M","We found out that our class throws away about forty plastic bottles every week!"],["W","Wow, that’s a lot! So, what’s your idea?"],["M","We want to put a special box for bottles in every classroom. Then, on Fridays, we can take them to the recycling center."],["W","That’s a great idea. Let’s go and talk to the principal."]],
+qs:[["How many bottles does the class throw away?",["about forty a week","about fourteen a week","about forty a day"]],
+["What is the group’s idea?",["Put a box for bottles in every classroom","Stop drinking water at school","Buy new bottles"]],
+["What are they going to do next?",["Talk to the principal","Take the bottles home","Give a prize to the class"]]]}
+];
+
 const STAGES={
  tya:{name:"Teens & Young Adults",ages:"14 años en adelante",time:"60 y 80",timeEn:"60 to 80",maxLv:5,
   desc:"for completing the Level Up English Placement Test, Teens & Young Adults stage, and achieving the level shown.",
@@ -1044,6 +1387,16 @@ const STAGES={
   {id:"grammar",name:"Grammar",es:"Gramática",type:"item",n:20,bank:J_GRAMMAR,mins:12,instr:"Elige la opción correcta para completar cada oración."},
   {id:"reading",name:"Reading",es:"Comprensión de lectura",type:"set",sets:3,per:5,bank:J_READING,mins:15,instr:"Lee cada texto con atención y contesta las preguntas. El texto se queda a la vista mientras respondes."},
   {id:"listening",name:"Listening",es:"Comprensión auditiva",type:"set",sets:4,per:3,bank:J_LISTENING,mins:10,instr:"Escucha cada audio con los audífonos puestos. Cada audio se puede reproducir máximo dos veces."}
+ ]},
+ yl:{name:"Young Learners",ages:"6 a 9 años",time:"25 y 35",timeEn:"25 to 35",maxLv:3,start:1,top:4,offset:1,kids:true,
+  desc:"for completing the Level Up English Placement Test, Young Learners stage, and achieving the level shown.",
+  sections:[
+  {id:"vocab",name:"Vocabulary",es:"Vocabulario",type:"item",n:10,bank:YL_VOCAB,mins:6,instr:"Mira las palabras y los dibujos, y elige la respuesta correcta.",
+   example:{t:"word",q:"tree",opts:["tree","flower","sun"]}},
+  {id:"grammar",name:"Grammar",es:"Gramática",type:"item",n:9,bank:YL_GRAMMAR,mins:7,instr:"Mira el dibujo o lee la oración, y elige la opción correcta.",
+   example:{t:"look",img:"boy_drinking",opts:["He is drinking water.","He is eating.","He is sleeping."]}},
+  {id:"reading",name:"Reading",es:"Comprensión de lectura",type:"set",sets:2,per:4,bank:YL_READING,mins:8,instr:"Lee cada cuento con calma y contesta las preguntas. El cuento se queda a la vista mientras respondes."},
+  {id:"listening",name:"Listening",es:"Comprensión auditiva",type:"set",sets:3,per:3,bank:YL_LISTENING,mins:7,instr:"Ponte los audífonos. Escucha cada audio y elige la respuesta correcta. Puedes escucharlo dos veces."}
  ]}
 };
 let SECTIONS,TOTAL_Q,STAGE_NAME,DESC_TXT,STG;
@@ -1056,6 +1409,7 @@ function applyStage(id){
 const KEY="sh_levelup_v1";
 let S=load();
 applyStage(S.stage);
+if(S.stage==="yl")setTimeout(()=>loadYL(),0);
 function blank(){return {phase:"welcome",name:"",stage:"tya",sectionIdx:0,started:null,ended:null,folio:"",secs:{},cur:null}}
 function load(){try{const v=JSON.parse(localStorage.getItem(KEY));return v&&v.phase?v:blank()}catch(e){return blank()}}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
@@ -1064,6 +1418,7 @@ function reset(){S=blank();applyStage(S.stage);save();render()}
 const $=s=>document.querySelector(s);
 const app=$("#app");
 const esc=t=>String(t).replace(/[&<>"]/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;"}[c]));
+function rng(n){return Array.from({length:n},(_,i)=>i)}
 function shuffle(a){a=a.slice();for(let i=a.length-1;i>0;i--){const j=Math.floor(Math.random()*(i+1));[a[i],a[j]]=[a[j],a[i]]}return a}
 function toast(m){const t=$("#toast");t.textContent=m;t.classList.add("show");clearTimeout(t._t);t._t=setTimeout(()=>t.classList.remove("show"),2200)}
 function confirmBox(msg,yes,onYes){
@@ -1076,7 +1431,14 @@ function confirmBox(msg,yes,onYes){
 
 /* ============ Adaptive engine ============ */
 function secState(sec){
-  if(!S.secs[sec.id]) S.secs[sec.id]={level:2,used:[],answers:[],setResults:[]};
+  if(!S.secs[sec.id]){
+    /* Later sections start at the level shown so far (routing), so short sections can still reach the top levels */
+    let start=STG.start||2;
+    const prev=SECTIONS.slice(0,SECTIONS.indexOf(sec)).filter(x=>S.secs[x.id]&&S.secs[x.id].answers.length);
+    if(prev.length) start=Math.round(prev.reduce((t,x)=>t+ability(x),0)/prev.length);
+    start=Math.max(1,Math.min(STG.top||5,start));
+    S.secs[sec.id]={level:start,used:[],answers:[],setResults:[]};
+  }
   return S.secs[sec.id];
 }
 const SEEN_KEY="sh_levelup_seen";
@@ -1099,13 +1461,13 @@ function serveNext(){
     const last=st.answers[st.answers.length-1];
     const idx=pickIndex(sec.bank,st.used,st.level,last?(last.ok?1:-1):0,sec.id);
     st.used.push(idx);markSeen(sec.id,idx);
-    S.cur={idx,order:shuffle([0,1,2,3]),choice:null};
+    const it=sec.bank[idx];S.cur={idx,order:shuffle(rng((it.opts||it[2]).length)),choice:null};
   }else{
     const last=st.setResults[st.setResults.length-1];
     const idx=pickIndex(sec.bank,st.used,st.level,last?(last.r>=.6?1:-1):0,sec.id);
     st.used.push(idx);markSeen(sec.id,idx);
     const n=sec.bank[idx].qs.length;
-    S.cur={idx,qi:0,orders:Array.from({length:n},()=>shuffle([0,1,2,3])),choice:null,correct:0,plays:0};
+    S.cur={idx,qi:0,orders:sec.bank[idx].qs.map(q=>shuffle(rng(q[1].length))),choice:null,correct:0,plays:0};
   }
   S.phase="q";save();render();
 }
@@ -1114,20 +1476,20 @@ function answer(){
   if(c.choice===null) return;
   if(sec.type==="item"){
     const item=sec.bank[c.idx], ok=c.order[c.choice]===0;
-    st.answers.push({lvl:item[0],ok});
-    st.level=Math.max(1,Math.min(5,st.level+(ok?1:-1)));
+    st.answers.push({lvl:item.lvl??item[0],ok,g:1/(item.opts||item[2]).length});
+    st.level=Math.max(1,Math.min(STG.top||5,st.level+(ok?1:-1)));
     if(st.answers.length>=sec.n) return finishSection();
     serveNext();
   }else{
     const set=sec.bank[c.idx], ok=c.orders[c.qi][c.choice]===0;
-    st.answers.push({lvl:set.lvl,ok});
+    st.answers.push({lvl:set.lvl,ok,g:1/set.qs[c.qi][1].length});
     if(ok) c.correct++;
     c.qi++;c.choice=null;
     if(c.qi<set.qs.length){save();keepAudio=playing;render();return}
     stopAudio();
     const r=c.correct/set.qs.length;
     st.setResults.push({lvl:set.lvl,r});
-    st.level=Math.max(1,Math.min(5,st.level+(r>=.6?1:r<=.4?-1:0)));
+    st.level=Math.max(1,Math.min(STG.top||5,st.level+(r>=.6?1:r<=.4?-1:0)));
     if(st.setResults.length>=sec.sets) return finishSection();
     serveNext();
   }
@@ -1145,18 +1507,21 @@ function ability(sec){
   for(let th=-0.5;th<=6.5;th+=0.05){
     let ll=0;
     for(const x of a){
-      const p=.25+.75/(1+Math.exp(-2.2*(th-x.lvl)));
+      const g=x.g||.25,p=g+(1-g)/(1+Math.exp(-2.2*(th-x.lvl)));
       ll+=Math.log(x.ok?p:1-p);
     }
     if(ll>bestLL){bestLL=ll;best=th}
   }
+  /* Never estimate beyond the levels actually seen (avoids runaway scores with few items) */
+  const lv=a.map(x=>x.lvl), hi=Math.max(...lv)+.5, lo=Math.min(...lv)-.5;
+  best=Math.max(lo,Math.min(hi,best));
   return Math.max(0,Math.min(6,best));
 }
 const WEIGHTS={vocab:.25,grammar:.30,reading:.25,listening:.20};
 function results(){
   const per=SECTIONS.map(sec=>{
     const st=S.secs[sec.id]||{answers:[]};
-    const a=ability(sec);
+    const a=Math.max(0,ability(sec)-(STG.offset||0));
     return {sec,a,lv:levelOf(a),ok:st.answers.filter(x=>x.ok).length,n:st.answers.length};
   });
   const overall=per.reduce((s,p)=>s+p.a*WEIGHTS[p.sec.id],0);
@@ -1244,6 +1609,7 @@ let keepAudio=false;
 function render(){
   if(!keepAudio) stopAudio();
   keepAudio=false;
+  if(S.stage==="yl"&&!window.YL_IMG&&S.phase!=="welcome"&&S.phase!=="done"){app.innerHTML=`<div class="wrap"><p class="meta2" style="text-align:center;margin-top:60px">Cargando dibujos…</p></div>`;loadYL(render);return}
   if(S.phase==="welcome") return vWelcome();
   if(S.phase==="prep") return vPrep();
   if(S.phase==="intro") return vIntro();
@@ -1277,8 +1643,7 @@ function vWelcome(){
     <div class="fld">
       <label>Etapa</label>
       <div class="stg">
-        ${["tya","jr"].map(k=>`<button class="opt" data-stage="${k}" aria-pressed="${S.stage===k}"><div><strong>${esc(STAGES[k].name)}</strong><span>${STAGES[k].ages}</span></div><em>${S.stage===k?"Seleccionada":"Elegir"}</em></button>`).join("")}
-        <button class="opt" disabled><div><strong>Young Learners</strong><span>6 a 9 años</span></div><em>Disponible pronto</em></button>
+        ${["tya","jr","yl"].map(k=>`<button class="opt" data-stage="${k}" aria-pressed="${S.stage===k}"><div><strong>${esc(STAGES[k].name)}</strong><span>${STAGES[k].ages}</span></div><em>${S.stage===k?"Seleccionada":"Elegir"}</em></button>`).join("")}
       </div>
     </div>
     <button class="dlbtn" id="go" style="background:#1F2E3A;color:#fff;margin-top:22px" disabled>Continuar</button>
@@ -1287,7 +1652,7 @@ function vWelcome(){
   const nm=$("#nm"),go=$("#go");
   const chk=()=>go.disabled=nm.value.trim().length<3;
   nm.oninput=chk;chk();
-  app.querySelectorAll("[data-stage]").forEach(b=>b.onclick=()=>{S.name=nm.value;S.stage=b.dataset.stage;applyStage(S.stage);save();render();const n=$("#nm");n.focus();n.setSelectionRange(n.value.length,n.value.length)});
+  app.querySelectorAll("[data-stage]").forEach(b=>b.onclick=()=>{S.name=nm.value;S.stage=b.dataset.stage;applyStage(S.stage);if(S.stage==="yl")loadYL();save();render();const n=$("#nm");n.focus();n.setSelectionRange(n.value.length,n.value.length)});
   go.onclick=()=>{S.name=nm.value.trim().replace(/\s+/g," ");S.phase="prep";save();render();window.scrollTo(0,0)};
 }
 
@@ -1303,6 +1668,7 @@ function vPrep(){
       <ul class="checks">
         <li>${ICON.check}<span>Ponte los audífonos y verifica que escuchas bien el audio de prueba.</span></li>
         <li>${ICON.check}<span>Contesta tú solo, sin traductores ni ayuda de otras personas. Así tu nivel será el correcto.</span></li>
+        ${STG.kids?`<li>${ICON.check}<span>Si el niño todavía no lee con soltura, un adulto puede leerle en voz alta las instrucciones en español, pero nunca las preguntas ni las respuestas en inglés.</span></li>`:""}
         <li>${ICON.check}<span>Una vez que avanzas, no puedes regresar a preguntas anteriores.</span></li>
         <li>${ICON.check}<span>Si no sabes una respuesta, elige la que te parezca más lógica. Las preguntas se ajustan a tu nivel conforme avanzas.</span></li>
       </ul>
@@ -1356,6 +1722,7 @@ function vIntro(){
     <h2 class="stitle">${sec.name}</h2>
     <p class="ses">${sec.es}</p>
     <p class="meta2 lead2">${sec.instr}</p>
+    ${sec.example?exampleHTML(sec.example,st.c):""}
     <div class="facts">${fact(n,"preguntas")}${sec.type==="set"?fact(sec.sets,sec.id==="reading"?"textos":"audios"):""}${fact(sec.mins,"minutos aprox.")}</div>
     <div class="steps">${SECTIONS.map((x,i)=>`<span class="${i<S.sectionIdx?"ok":i===S.sectionIdx?"now":""}" style="--c:${SEC_STYLE[x.id].c};--b:${SEC_STYLE[x.id].b}">${i<S.sectionIdx?ICON.tick:""}${x.name}</span>`).join("")}</div>
     <button class="dlbtn" id="go" style="background:#1F2E3A;color:#fff;margin-top:22px">Comenzar ${sec.name}</button>
@@ -1368,6 +1735,30 @@ function vIntro(){
 function optionsHTML(texts,order,choice){
   return `<div class="opts">${order.map((o,i)=>`<button class="opt" data-i="${i}" aria-pressed="${choice===i}"><span class="k">${"ABCD"[i]}</span><span>${esc(texts[o])}</span></button>`).join("")}</div>`;
 }
+function YLI(n){return (window.YL_IMG&&YL_IMG[n])||""}
+function loadYL(cb){
+  if(window.YL_IMG){cb&&cb();return}
+  if(loadYL.q){if(cb)loadYL.q.push(cb);return}
+  loadYL.q=cb?[cb]:[];
+  const sc=document.createElement("script");sc.src="yl-img.js";
+  sc.onload=()=>{const q=loadYL.q;loadYL.q=null;q.forEach(f=>f())};
+  sc.onerror=()=>{loadYL.q=null;sc.remove();toast("No se pudieron cargar los dibujos. Revisa la conexión.")};
+  document.head.appendChild(sc);
+}
+function picOptsHTML(names,order,choice){
+  return `<div class="opts pics">${order.map((o,i)=>`<button class="opt pic" data-i="${i}" aria-pressed="${choice===i}"><span class="k">${"ABCD"[i]}</span><img src="${YLI(names[o])}" alt="Opción ${"ABCD"[i]}"></button>`).join("")}</div>`;
+}
+const YL_INS={word:["Read the word. Choose the right picture.","Lee la palabra y elige el dibujo correcto."],def:["Read and choose the right picture.","Lee la oración y elige el dibujo correcto."],look:["Look at the picture. Choose the right sentence.","Mira el dibujo y elige la oración correcta."],txt:["Choose the best option to complete the sentence.","Elige la opción que completa mejor la oración."]};
+function ylItemHTML(it,order,choice){
+  const pic=it.t==="word"||it.t==="def";
+  return `${it.img?`<div class="scene"><img src="${YLI(it.img)}" alt=""></div>`:""}
+   ${it.t==="word"?`<p class="bigword">${esc(it.q)}</p>`:it.q?`<p class="prompt">${promptHTML(it.q)}</p>`:""}
+   ${pic?picOptsHTML(it.opts,order,choice):optionsHTML(it.opts,order,choice)}`;
+}
+function exampleHTML(ex,col){
+  const ins=YL_INS[ex.t];
+  return `<div class="example" style="--c:${col}"><span class="extag">Ejemplo</span><p class="exins">${ins[1]}</p>${ylItemHTML(ex,ex.opts.map((_,i)=>i),0)}<p class="exnote">La respuesta correcta está marcada.</p></div>`;
+}
 function promptHTML(t){return esc(t).replace(/_{3}/,'<span class="gap"></span>')}
 
 function vQuestion(){
@@ -1379,15 +1770,20 @@ function vQuestion(){
   let body="";
   if(sec.type==="item"){
     const it=sec.bank[c.idx];
+    if(!Array.isArray(it)){
+      const ins=YL_INS[it.t];
+      body=`<div class="qcard">${qhead}<p class="instr">${ins[0]}<br><span class="ines">${ins[1]}</span></p>${ylItemHTML(it,c.order,c.choice)}
+      <div class="next"><button class="dlbtn nx" id="nx" ${c.choice===null?"disabled":""}>Siguiente</button></div></div>`;
+    }else
     body=`<div class="qcard">${qhead}<p class="instr">Choose the best option to complete the sentence.</p>
       <p class="prompt">${promptHTML(it[1])}</p>${optionsHTML(it[2],c.order,c.choice)}
       <div class="next"><button class="dlbtn nx" id="nx" ${c.choice===null?"disabled":""}>Siguiente</button></div></div>`;
   }else if(sec.id==="reading"){
     const set=sec.bank[c.idx], q=set.qs[c.qi];
     body=`<div class="split">
-      <article class="passage" style="--c:${stl.c}"><span class="ptag">Reading text</span><h4>${esc(set.title)}</h4>${set.paras.map(p=>{const e=esc(p);if(set.notice){const i=e.indexOf(":");return `<p><b>${e.slice(0,i+1)}</b>${e.slice(i+1)}</p>`}return `<p>${e}</p>`}).join("")}</article>
-      <div class="qcard">${qhead}<p class="instr">Question ${c.qi+1} of ${set.qs.length} about this text</p>
-        <p class="prompt">${esc(q[0])}</p>${optionsHTML(q[1],c.orders[c.qi],c.choice)}
+      <article class="passage" style="--c:${stl.c}"><span class="ptag">Reading text</span><h4>${esc(set.title)}</h4>${set.img?`<img class="pimg" src="${YLI(set.img)}" alt="">`:""}${set.paras.map(p=>{const e=esc(p);if(set.notice){const i=e.indexOf(":");return `<p><b>${e.slice(0,i+1)}</b>${e.slice(i+1)}</p>`}return `<p>${e}</p>`}).join("")}</article>
+      <div class="qcard">${qhead}<p class="instr">Question ${c.qi+1} of ${set.qs.length} about this text${STG.kids?`<br><span class="ines">Lee el cuento y elige la respuesta correcta.</span>`:""}</p>
+        <p class="prompt">${esc(q[0])}</p>${q[2]==="pic"?picOptsHTML(q[1],c.orders[c.qi],c.choice):optionsHTML(q[1],c.orders[c.qi],c.choice)}
         <div class="next"><button class="dlbtn nx" id="nx" ${c.choice===null?"disabled":""}>Siguiente</button></div></div>
     </div>`;
   }else{
@@ -1397,11 +1793,11 @@ function vQuestion(){
         <div><b>${esc(set.title)}</b><small id="plays">${playing?"Reproduciendo…":left>0?`Puedes escucharlo ${left===2?"2 veces":"1 vez más"}`:"Ya lo escuchaste 2 veces"}</small></div>
         <div class="wave"><i></i><i></i><i></i><i></i><i></i></div>
       </div>
-      <div class="qcard">${qhead}<p class="instr">Question ${c.qi+1} of ${set.qs.length} about this audio</p>
-        <p class="prompt">${esc(q[0])}</p>${optionsHTML(q[1],c.orders[c.qi],c.choice)}
+      <div class="qcard">${qhead}<p class="instr">Question ${c.qi+1} of ${set.qs.length} about this audio${STG.kids?`<br><span class="ines">Escucha el audio y elige la respuesta correcta.</span>`:""}</p>
+        <p class="prompt">${esc(q[0])}</p>${q[2]==="pic"?picOptsHTML(q[1],c.orders[c.qi],c.choice):optionsHTML(q[1],c.orders[c.qi],c.choice)}
         <div class="next"><button class="dlbtn nx" id="nx" ${c.choice===null?"disabled":""}>Siguiente</button></div></div>`;
   }
-  app.innerHTML=header()+`<div class="wrap qwrap" style="--c:${stl.c};--b:${stl.b}">${body}</div>`;
+  app.innerHTML=header()+`<div class="wrap qwrap${STG.kids?" kids":""}" style="--c:${stl.c};--b:${stl.b}">${body}</div>`;
   app.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{
     c.choice=+b.dataset.i;save();
     app.querySelectorAll(".opt").forEach(x=>x.setAttribute("aria-pressed",x===b));
