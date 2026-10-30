@@ -231,6 +231,67 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--sand);outline-o
 .res .opt[aria-pressed="true"] em{background:linear-gradient(90deg,#E07A5F,#D9A441);color:#fff}
 .res .opt:disabled{opacity:.55;cursor:not-allowed}
 
+/* Exam screens (same design as welcome/results) */
+.bar{background:rgba(227,223,211,.92);backdrop-filter:blur(8px);-webkit-backdrop-filter:blur(8px);border-bottom:0;padding:12px 0}
+.bar-in{max-width:760px;background:#fff;border-radius:999px;padding:10px 20px 10px 14px;box-shadow:0 6px 20px rgba(31,46,58,.07);margin:0 auto;width:calc(100% - 28px)}
+.bar img{width:40px}
+.sec{height:9px;background:#EEF0F1}
+.sec.cur{box-shadow:0 0 0 2px #fff,0 0 0 3.5px #DDE2E6}
+.clock{font-family:Poppins,var(--sans);font-weight:600;font-size:14px;color:#1F2E3A;background:#F3F1EC;border-radius:999px;padding:5px 12px;min-width:auto}
+.secintro{margin-top:10px}
+.secintro .kick{margin-top:6px;position:relative}
+.sbadge{position:relative;width:84px;height:84px;border-radius:50%;display:grid;place-items:center;margin:8px auto 0;box-shadow:0 10px 24px rgba(31,46,58,.12)}
+.stitle{position:relative;font-family:Poppins,var(--sans);font-weight:800;font-size:clamp(34px,7vw,44px);letter-spacing:-.02em;margin:18px 0 0;color:#1F2E3A;line-height:1.1}
+.ses{position:relative;margin:4px 0 0;font-size:15px;font-weight:500;color:#6B7A84}
+.lead2{position:relative;font-size:15px!important;line-height:1.55;max-width:400px;margin:14px auto 0!important}
+.secintro .facts{position:relative;display:flex;justify-content:center;gap:10px;margin-top:22px;flex-wrap:wrap}
+.secintro .fact{flex:1;min-width:92px;max-width:140px;border:1.5px solid;border-radius:16px;padding:12px 8px}
+.secintro .fact b{display:block;font-size:28px;font-weight:800;line-height:1.1;color:#1F2E3A}
+.secintro .fact small{font-size:12.5px;color:#6B7A84;font-weight:500}
+.steps{position:relative;display:flex;flex-wrap:wrap;justify-content:center;gap:6px;margin-top:20px}
+.steps span{display:inline-flex;align-items:center;gap:5px;font-size:12.5px;font-weight:600;border-radius:999px;padding:5px 12px;background:#F3F1EC;color:#9AA4AB}
+.steps span.now{background:var(--c);color:#fff}
+.steps span.ok{background:var(--b);color:#1F2E3A}
+.steps span.ok svg{stroke:#1F2E3A}
+.qwrap{max-width:760px;padding-top:10px;font-family:Poppins,var(--sans);color:#1F2E3A}
+.qwrap .qcard{background:#fff;border-radius:26px;padding:24px 24px 22px;box-shadow:0 12px 34px rgba(31,46,58,.09);position:relative}
+.qhead{display:flex;align-items:center;justify-content:space-between;gap:10px;margin-bottom:18px}
+.qhead .chip{font-size:13px;font-weight:600;color:#fff;border-radius:999px;padding:6px 14px;letter-spacing:.02em}
+.qhead .qn{font-size:13px;font-weight:600;color:#6B7A84;background:#F3F1EC;border-radius:999px;padding:6px 12px}
+.qwrap .instr{font-family:var(--sans);font-size:14px;color:#6B7A84;margin:0 0 8px}
+.qwrap .prompt{font-size:21px;font-weight:600;line-height:1.45;color:#1F2E3A}
+.qwrap .prompt .gap{border-bottom:2.5px solid var(--c);min-width:90px}
+.qwrap .opt{border:1.5px solid #E6E9EC;border-radius:16px;font-family:Poppins,var(--sans);font-size:17px;font-weight:500;color:#1F2E3A;padding:13px 16px;min-height:58px}
+.qwrap .opt .k{background:#F3F1EC;color:#1F2E3A;font-weight:600;width:32px;height:32px;font-size:14px}
+.qwrap .opt[aria-pressed="true"]{border-color:#1F2E3A;background:#fff;box-shadow:inset 0 0 0 1px #1F2E3A}
+.qwrap .opt[aria-pressed="true"] .k{background:var(--c);color:#fff}
+.qwrap .next{display:block;margin-top:18px}
+.dlbtn.nx{display:block;width:100%;border:0;border-radius:14px;padding:15px;font:600 16px Poppins,var(--sans);background:#1F2E3A;color:#fff}
+.dlbtn.nx:disabled{opacity:.3;cursor:not-allowed}
+.qwrap .passage{border:0;border-radius:26px;box-shadow:0 12px 34px rgba(31,46,58,.09);padding:24px 26px;top:92px}
+.qwrap .passage .ptag{display:inline-block;font-size:12px;font-weight:600;letter-spacing:.18em;text-transform:uppercase;color:#6B7A84;margin-bottom:6px}
+.qwrap .passage h4{font-family:Poppins,var(--sans);font-weight:700;font-size:22px;color:#1F2E3A;padding-bottom:12px;border-bottom:3px solid var(--c);display:inline-block}
+.qwrap .passage p{font-family:var(--sans);font-size:17px;line-height:1.7;color:#2E3D48}
+.qwrap .player{border:0;border-radius:26px;box-shadow:0 12px 34px rgba(31,46,58,.09);padding:18px 22px}
+.qwrap .play{background:var(--c);box-shadow:0 8px 18px rgba(31,46,58,.15)}
+.qwrap .player b{font-weight:700;font-size:17px}
+.qwrap .player small{font-family:var(--sans);font-size:14px;color:#6B7A84}
+.qwrap .wave i{background:var(--c)}
+.prepcard .audiotest .play.on{animation:pulse 1.2s ease-in-out infinite}
+@keyframes pulse{0%,100%{box-shadow:0 0 0 0 rgba(31,46,58,.25)}50%{box-shadow:0 0 0 12px rgba(31,46,58,0)}}
+@media (max-width:480px){
+  .steps{flex-wrap:nowrap;gap:4px}
+  .steps span{font-size:11px;padding:4px 8px;gap:3px}
+  .qwrap .play{width:60px;height:60px}
+  .qwrap .player{gap:14px;padding:16px}
+  .qwrap .wave{display:none}
+  .bar-in{padding:8px 14px 8px 10px;gap:10px}
+  .bar img{width:32px}
+  .qwrap .qcard{padding:20px 16px 18px;border-radius:22px}
+  .qwrap .prompt{font-size:19px}
+  .qwrap .opt{font-size:16px}
+  .qwrap .passage{padding:20px 18px;border-radius:22px}
+}
 </style>
 </head>
 <body>
@@ -489,7 +550,484 @@ qs:[
 ["What does the man suggest about Oslo?",["Its success depended on long planning.","It failed to reduce traffic.","It banned cars overnight.","It is not a good example to follow."]]]}
 ];
 
-const SECTIONS=[
+/* ============ Item banks: Juniors (10–13) ============
+   Format: [level 1–5, sentence with ___, [correct, distractor, distractor, distractor]] */
+const J_VOCAB=[
+[1,"My sister and I go to school by ___ every morning.",["bus","bed","book","bread"]],
+[1,"I drink a glass of ___ with my breakfast.",["milk","chair","pencil","shoe"]],
+[1,"My father’s brother is my ___ .",["uncle","aunt","sister","grandmother"]],
+[1,"We write in our ___ during class.",["notebooks","sandwiches","windows","shoes"]],
+[1,"A cat has four ___ .",["legs","arms","hands","wings"]],
+[1,"It’s raining. Take your ___ !",["umbrella","sunglasses","ball","pillow"]],
+[1,"I brush my ___ after every meal.",["teeth","hair","shoes","bag"]],
+[1,"There are seven ___ in a week.",["days","months","years","hours"]],
+[1,"An elephant is a very ___ animal.",["big","tiny","young","cold"]],
+[1,"I’m hungry. Can I have a ___ , please?",["sandwich","pencil","towel","chair"]],
+[1,"The sky is ___ on a sunny day.",["blue","green","black","brown"]],
+[1,"We cut paper with ___ .",["scissors","spoons","pillows","clocks"]],
+[1,"My birthday is in ___ , the first month of the year.",["January","Monday","summer","morning"]],
+[1,"At night, I sleep in my ___ .",["bed","kitchen","desk","shoe"]],
+[1,"A ___ teaches students at school.",["teacher","doctor","farmer","driver"]],
+[1,"Fish live in the ___ .",["water","sky","tree","desert"]],
+[1,"I play soccer in the ___ after school.",["park","bathroom","fridge","bed"]],
+[1,"Twelve plus eight is ___ .",["twenty","eighteen","thirty","twelve"]],
+[1,"We eat soup with a ___ .",["spoon","knife","comb","pencil"]],
+[1,"My grandmother is old. My baby brother is ___ .",["young","tall","angry","late"]],
+
+[2,"I can’t find my ___ . I need it to open the door.",["key","map","coin","watch"]],
+[2,"My favorite ___ is math because I love numbers.",["subject","sport","meal","holiday"]],
+[2,"Please ___ the light. It’s dark in here.",["turn on","turn off","put down","take off"]],
+[2,"I ___ my homework before dinner every day.",["do","make","play","take"]],
+[2,"We need flour, eggs and sugar to ___ a cake.",["bake","fry","boil","wash"]],
+[2,"Diego broke his arm, so he went to the ___ .",["hospital","library","museum","stadium"]],
+[2,"It’s very hot today. Let’s go to the ___ and swim.",["pool","bank","post office","bookstore"]],
+[2,"My little brother is ___ of the dark, so he sleeps with a lamp on.",["afraid","proud","tired","bored"]],
+[2,"Can you ___ me your pencil? I forgot mine.",["lend","borrow","give back","keep"]],
+[2,"The opposite of “expensive” is ___ .",["cheap","rich","heavy","easy"]],
+[2,"We watched a funny ___ at the cinema last weekend.",["movie","song","newspaper","stage"]],
+[2,"Sofía is very ___ . She always helps her classmates.",["kind","lazy","rude","noisy"]],
+[2,"A ___ is a person who flies a plane.",["pilot","chef","nurse","firefighter"]],
+[2,"Put the milk back in the ___ so it stays cold.",["fridge","oven","sink","drawer"]],
+[2,"I ___ the bus this morning, so I was late for school.",["missed","lost","forgot","left"]],
+[2,"There’s a big ___ in our town. It has more than fifty shops.",["mall","farm","lake","forest"]],
+[2,"I can’t hear the music. Can you turn up the ___ ?",["volume","light","speed","temperature"]],
+[2,"We went ___ in the mountains and slept in a tent.",["camping","shopping","dancing","bowling"]],
+[2,"Our science teacher wears a white ___ in the lab.",["coat","scarf","swimsuit","belt"]],
+[2,"I always feel ___ after a long soccer practice.",["tired","awake","fresh","quiet"]],
+
+[3,"I’m saving my ___ to buy a new bike.",["pocket money","change","price","bill"]],
+[3,"Our teacher asked us to ___ the text quickly to find the main idea.",["skim","skip","shout","spell"]],
+[3,"Mateo was ___ when he won first prize in the science fair.",["thrilled","ashamed","jealous","bored"]],
+[3,"Please ___ your phone during the exam.",["switch off","pick up","look after","give up"]],
+[3,"The museum is ___ on Mondays, so we’ll go on Tuesday.",["closed","broken","lost","tidy"]],
+[3,"If you don’t understand a word, you can look it ___ in the dictionary.",["up","out","after","for"]],
+[3,"We need to ___ the plants every two days or they’ll die.",["water","feed","grow","pour"]],
+[3,"The ___ of our school trip was a visit to the aquarium.",["highlight","headline","deadline","outline"]],
+[3,"I didn’t ___ my exam, so I have to take it again.",["pass","win","succeed","reach"]],
+[3,"Lucía ___ her grandmother; they have the same eyes and smile.",["takes after","looks after","gets over","runs into"]],
+[3,"Recycling helps to ___ the amount of trash we produce.",["reduce","raise","waste","borrow"]],
+[3,"Our team was losing, but we didn’t ___ , and we won in the last minute.",["give up","take off","set off","turn up"]],
+[3,"There was a long ___ of people waiting to buy tickets.",["line","crowd","group","pile"]],
+[3,"The weather ___ says it will rain tomorrow afternoon.",["forecast","channel","program","climate"]],
+[3,"He’s very ___ about space; he reads every book he can find about planets.",["curious","careful","nervous","furious"]],
+[3,"Can you ___ an eye on my backpack while I go to the bathroom?",["keep","put","take","hold"]],
+[3,"The volcano ___ and covered the village in ash.",["erupted","froze","melted","flooded"]],
+[3,"I had to ___ my bedroom before my friends came over.",["tidy up","make up","wake up","grow up"]],
+[3,"Sea turtles are an ___ species, so we must protect them.",["endangered","extinct","ancient","enormous"]],
+[3,"My best friend moved to another city, so I ___ her a lot.",["miss","lose","forget","leave"]],
+
+[4,"The scientist made an important ___ about how bees communicate.",["discovery","invention","experiment","creation"]],
+[4,"Despite the heavy rain, the match wasn’t ___ .",["called off","put on","set up","carried out"]],
+[4,"Her explanation was so ___ that everyone understood the topic immediately.",["straightforward","misleading","tedious","reluctant"]],
+[4,"Too much screen time can have a negative ___ on your sleep.",["effect","affect","result","cause"]],
+[4,"The new park will ___ the whole community, not only children.",["benefit","profit","earn","gain"]],
+[4,"I couldn’t ___ my laughter when the teacher’s chair squeaked so loudly.",["hold back","hold on","bring up","look into"]],
+[4,"Paula is extremely ___ ; she never stops trying until she reaches her goal.",["determined","careless","hesitant","indifferent"]],
+[4,"The firefighters managed to ___ the fire before it reached the houses.",["put out","put off","put up","put away"]],
+[4,"We need to ___ a solution to the noise problem in the library.",["come up with","catch up with","put up with","keep up with"]],
+[4,"Many animals ___ in winter, sleeping until the weather gets warmer.",["hibernate","migrate","evolve","shelter"]],
+[4,"The coach gave us some ___ advice before the final.",["valuable","valued","worthy","pricey"]],
+[4,"I’m not very good at math, but I’ve made a lot of ___ this year.",["progress","advance","success","growth"]],
+[4,"The rainforest is home to a huge ___ of plants and animals.",["variety","amount","size","level"]],
+[4,"Please don’t ___ ; let me finish what I’m saying.",["interrupt","interfere","intervene","insist"]],
+[4,"Our class raised money to ___ a local animal shelter.",["support","supply","suggest","suppose"]],
+[4,"My brother is ___ to peanuts, so he has to read food labels carefully.",["allergic","attracted","addicted","immune"]],
+[4,"The documentary ___ the importance of protecting coral reefs.",["highlighted","underlined","noticed","marked"]],
+[4,"This old bridge is no longer ___ ; cars can’t cross it anymore.",["safe","sore","sharp","steep"]],
+[4,"After weeks of practice, our band finally felt ___ to play in front of the school.",["confident","comfortable with","convinced","conscious"]],
+[4,"The teacher asked us to ___ the two poems and explain how they are different.",["compare","compete","complete","complain"]],
+
+[5,"The results of the experiment were ___ , so the scientists repeated it.",["inconclusive","inconsiderate","inexpensive","incredible"]],
+[5,"She gave a ___ speech that moved the whole audience to tears.",["heartfelt","heartbroken","light-hearted","half-hearted"]],
+[5,"The village was ___ cut off from the rest of the country after the storm.",["virtually","virtuously","vividly","vaguely"]],
+[5,"Plastic waste poses a serious ___ to marine life.",["threat","damage","injury","fear"]],
+[5,"His argument was not very ___ ; nobody changed their mind.",["persuasive","pervasive","perceptive","permissive"]],
+[5,"The teacher’s instructions were ___ ; we had no idea what to do.",["ambiguous","ambitious","anonymous","enormous"]],
+[5,"We should ___ the needs of others before making a decision.",["take into account","take for granted","take part in","take over"]],
+[5,"The athlete’s ___ performance broke the national record.",["outstanding","outgoing","outdated","outspoken"]],
+[5,"Bats use sound to ___ their way in the dark.",["navigate","negotiate","nominate","narrate"]],
+[5,"The museum’s new exhibition ___ thousands of visitors every week.",["attracts","attaches","attends","attempts"]],
+[5,"Her story was so ___ that I could picture every detail.",["vivid","valid","vacant","vain"]],
+[5,"Scientists are trying to ___ why so many frogs are disappearing.",["determine","deteriorate","dominate","decorate"]],
+[5,"He apologized, but his apology sounded ___ .",["insincere","insecure","insane","inactive"]],
+[5,"The city introduced new rules to ___ air pollution.",["curb","curl","curve","cure"]],
+[5,"The two scientists ___ on the project for over ten years.",["collaborated","corresponded","competed","complied"]]
+];
+
+const J_GRAMMAR=[
+[1,"I ___ eleven years old.",["am","is","are","be"]],
+[1,"My brother ___ two pets.",["has","have","is","are"]],
+[1,"___ you like pizza?",["Do","Does","Are","Is"]],
+[1,"She ___ like spiders.",["doesn’t","don’t","isn’t","aren’t"]],
+[1,"This is ___ new backpack.",["my","me","I","mine"]],
+[1,"There ___ a dog in the garden.",["is","are","be","am"]],
+[1,"I can ___ very fast.",["run","runs","running","to run"]],
+[1,"We have English class ___ Monday.",["on","in","at","to"]],
+[1,"Look! The baby ___ .",["is sleeping","sleeps","sleep","are sleeping"]],
+[1,"How ___ apples do you want?",["many","much","old","long"]],
+[1,"These ___ my friends, Ana and Pablo.",["are","is","am","be"]],
+[1,"My mom ___ to work every day.",["drives","drive","driving","is drive"]],
+[1,"Where ___ your cousins live?",["do","does","are","is"]],
+[1,"I have two ___ .",["sisters","sister","sisteres","sister’s"]],
+[1,"___ is your name?",["What","Who","Where","How"]],
+[1,"My dad and I ___ soccer on Saturdays.",["play","plays","playing","is play"]],
+[1,"___ your sister tall?",["Is","Are","Does","Do"]],
+[1,"I get up ___ seven o’clock.",["at","on","in","for"]],
+[1,"Can you help ___ , please?",["me","I","my","mine"]],
+[1,"There are three ___ on the table.",["boxes","box","boxs","boxies"]],
+
+[2,"Yesterday I ___ my grandparents.",["visited","visit","visiting","visits"]],
+[2,"We ___ to the beach last summer.",["went","go","goes","gone"]],
+[2,"Did you ___ your homework?",["finish","finished","finishing","finishes"]],
+[2,"My sister is ___ than me.",["older","old","oldest","more old"]],
+[2,"This is the ___ day of the year!",["best","good","better","most good"]],
+[2,"I’m ___ to visit Cancún next month.",["going","go","will","went"]],
+[2,"There isn’t ___ milk in the fridge.",["any","some","many","a"]],
+[2,"She ___ watching TV when I called her.",["was","were","is","did"]],
+[2,"You ___ run in the hallway. It’s dangerous.",["mustn’t","don’t have","haven’t","aren’t"]],
+[2,"I ___ swim when I was five.",["could","can","may","must"]],
+[2,"What ___ you do last weekend?",["did","do","were","have"]],
+[2,"He ___ his bike to school every day.",["rides","is ride","ride","riding"]],
+[2,"We didn’t ___ the movie. It was boring.",["like","liked","liking","likes"]],
+[2,"Is this book ___ or yours?",["mine","my","me","I"]],
+[2,"I enjoy ___ comics in my free time.",["reading","read","reads","to reading"]],
+[2,"It will ___ tomorrow, so take your umbrella.",["rain","rains","raining","rained"]],
+[2,"Mexico City is ___ than my town.",["bigger","more big","biggest","big"]],
+[2,"___ there any cookies left?",["Are","Is","Have","Do"]],
+[2,"I have to ___ up early tomorrow.",["get","got","getting","gets"]],
+[2,"They ___ playing video games right now.",["are","is","do","have"]],
+
+[3,"I have ___ been to Europe.",["never","ever","yet","ago"]],
+[3,"She has lived in Puebla ___ 2019.",["since","for","from","ago"]],
+[3,"If it rains tomorrow, we ___ stay at home.",["will","would","are","did"]],
+[3,"While I ___ my homework, the lights went out.",["was doing","did","am doing","have done"]],
+[3,"Have you finished your project ___ ?",["yet","already","still","ever"]],
+[3,"This is the boy ___ won the spelling contest.",["who","which","where","whose"]],
+[3,"Students ___ wear a uniform at our school. It’s a rule.",["have to","don’t have to","mustn’t","needn’t"]],
+[3,"I’m not very good ___ drawing.",["at","in","on","for"]],
+[3,"The pyramids ___ by ancient people many centuries ago.",["were built","built","are built","have built"]],
+[3,"We ___ the movie yet. Don’t tell us the ending!",["haven’t seen","didn’t see","don’t see","weren’t seeing"]],
+[3,"You should ___ more water when it’s hot.",["drink","to drink","drinking","drank"]],
+[3,"My phone is ___ expensive than yours.",["less","fewer","least","little"]],
+[3,"How long ___ you known your best friend?",["have","did","are","do"]],
+[3,"She ___ to the dentist twice this year.",["has been","went been","is been","have gone"]],
+[3,"If I ___ you, I would talk to the teacher.",["were","am","will be","be"]],
+[3,"There were ___ people at the concert that we couldn’t move.",["so many","so much","such","too much"]],
+[3,"Neither Ana ___ Luis came to class today.",["nor","or","and","but"]],
+[3,"I used to ___ afraid of dogs, but now I love them.",["be","being","been","was"]],
+[3,"The movie was ___ boring that I fell asleep.",["so","such","too","very"]],
+[3,"We decided ___ a cake for Mom’s birthday.",["to bake","baking","bake","baked"]],
+
+[4,"I’m looking forward ___ you at the camp.",["to seeing","to see","seeing","for seeing"]],
+[4,"If I had studied harder, I ___ the test.",["would have passed","would pass","had passed","will pass"]],
+[4,"She told us that she ___ the book twice.",["had read","reads","is reading","will read"]],
+[4,"By the time we got to the cinema, the movie ___ .",["had already started","already starts","has already started","is already starting"]],
+[4,"You ___ have told me! I would have helped you.",["should","must","can","will"]],
+[4,"The teacher made us ___ the exercise again.",["do","to do","doing","did"]],
+[4,"I wish I ___ a dog, but our building doesn’t allow pets.",["had","have","will have","would have"]],
+[4,"This is the museum ___ we saw the dinosaur skeleton.",["where","which","who","whose"]],
+[4,"___ the rain, the school trip went ahead.",["Despite","Although","However","Even"]],
+[4,"He’s used to ___ up early for swimming practice.",["getting","get","got","have got"]],
+[4,"Our homework ___ by Friday.",["must be handed in","must hand in","must be hand in","must handed in"]],
+[4,"She’s the girl ___ brother plays in the band.",["whose","who","who’s","which"]],
+[4,"Unless you hurry, you ___ the bus.",["will miss","miss","won’t miss","would miss"]],
+[4,"It’s the first time I ___ snow!",["have seen","saw","see","had seen"]],
+[4,"My bike needs ___ .",["fixing","to fix","fix","fixed"]],
+[4,"I don’t know where ___ .",["he lives","does he live","lives he","he does live"]],
+[4,"We had our photo ___ by a professional photographer.",["taken","take","taking","to take"]],
+[4,"He might ___ my message; he hasn’t replied.",["not have seen","not saw","not seen","haven’t seen"]],
+[4,"So far this week, it ___ every single day.",["has rained","rained","rains","had rained"]],
+[4,"The more you read, ___ your vocabulary gets.",["the bigger","bigger","the biggest","more big"]],
+
+[5,"I’d rather you ___ my phone without asking.",["didn’t use","don’t use","won’t use","not to use"]],
+[5,"Hardly ___ the bell rung when the students ran outside.",["had","has","did","was"]],
+[5,"Had I known about the party, I ___ .",["would have come","would come","had come","will come"]],
+[5,"It’s high time we ___ home.",["went","go","will go","going"]],
+[5,"Not only ___ the race, but she also broke the record.",["did she win","she won","she did win","won she"]],
+[5,"The project, ___ took us three months, won first prize.",["which","that","what","who"]],
+[5,"She denied ___ the window.",["breaking","to break","break","broke"]],
+[5,"If he hadn’t missed the bus, he ___ here now.",["would be","would have been","will be","had been"]],
+[5,"You needn’t ___ so much food; there are only four of us.",["have cooked","cooked","to cook","cooking"]],
+[5,"___ tired she was, she kept training.",["However","Although","Despite","Even"]],
+[5,"He is said ___ the fastest runner in the school.",["to be","being","that he is","be"]],
+[5,"I’ll lend you my tablet ___ you return it by Friday.",["provided that","unless","in case","even if"]],
+[5,"No sooner had we arrived ___ it started to rain.",["than","when","then","that"]],
+[5,"She suggested that we ___ the museum on Sunday.",["visit","visiting","to visit","will visit"]],
+[5,"___ the map more carefully, we wouldn’t have got lost.",["Had we read","If we read","We had read","Did we read"]]
+];
+
+/* Reading (Juniors): {lvl,title,paras,qs:[[question,[correct,...]]]} */
+const J_READING=[
+{lvl:1,title:"My Pet Rabbit",paras:[
+"Hello! My name is Valeria and I’m ten years old. I have a pet rabbit. His name is Copo. He is white with black ears.",
+"Copo lives in a big box in our garden. He eats carrots, lettuce and apples. He doesn’t like bananas!",
+"Every afternoon after school, I play with Copo. He likes to run on the grass. At night, my dad puts Copo’s box inside the house because it is cold."],
+qs:[
+["How old is Valeria?",["Ten","Eleven","Twelve","Nine"]],
+["What color are Copo’s ears?",["Black","White","Brown","Gray"]],
+["Where does Copo live?",["In a box in the garden","In Valeria’s bedroom","In the kitchen","At school"]],
+["What food does Copo NOT like?",["Bananas","Carrots","Apples","Lettuce"]],
+["Why does Dad put the box inside at night?",["Because it is cold","Because it is dirty","Because Copo is hungry","Because it is raining"]]]},
+
+{lvl:1,title:"A Day at School",paras:[
+"My name is Tomás. I go to school from Monday to Friday. Classes start at eight o’clock.",
+"My favorite class is art because I love painting. I don’t like math very much, but my math teacher, Miss Rosa, is very nice.",
+"At eleven o’clock we have a break. I eat a sandwich and play basketball with my friends. School finishes at two o’clock, and my mom picks me up."],
+qs:[
+["What time do classes start?",["At eight o’clock","At eleven o’clock","At two o’clock","At seven o’clock"]],
+["What is Tomás’s favorite class?",["Art","Math","English","Science"]],
+["Who is Miss Rosa?",["His math teacher","His art teacher","His mom","His friend"]],
+["What does Tomás do at the break?",["He eats and plays basketball","He paints a picture","He does homework","He reads a book"]],
+["Who picks Tomás up from school?",["His mom","His dad","His teacher","His grandmother"]]]},
+
+{lvl:1,title:"Party Invitation",paras:[
+"Come to my birthday party! I’m turning eleven!",
+"Day: Saturday, May 14. Time: 4:00 to 7:00 p.m. Place: Fun Park, next to the big supermarket.",
+"There will be pizza, cake and a magic show. Please wear comfortable clothes because we are going to play in the trampoline area. Don’t forget your socks!",
+"Please call my mom before Wednesday to say if you can come. — Emilia"],
+qs:[
+["Why is Emilia having a party?",["It’s her birthday","It’s the end of school","It’s her mom’s birthday","It’s a holiday"]],
+["How old will Emilia be?",["Eleven","Ten","Twelve","Fourteen"]],
+["Where is the party?",["At Fun Park","At Emilia’s house","At the supermarket","At school"]],
+["Why should guests wear comfortable clothes?",["They will jump on trampolines","They will swim","They will dance on a stage","They will play soccer"]],
+["What should guests do before Wednesday?",["Call Emilia’s mom","Buy a present","Send a letter","Visit the park"]]]},
+
+{lvl:1,title:"My Bedroom",paras:[
+"I share my bedroom with my brother, Iker. Our room is small, but it is very nice. The walls are green.",
+"There are two beds, one desk and a big window. On the desk there is a computer and a lamp. We do our homework there.",
+"My favorite thing in the room is a poster of the solar system. Iker’s favorite thing is his guitar. He plays it every evening, and sometimes it’s very loud!"],
+qs:[
+["Who shares the bedroom?",["The writer and his brother","The writer and his sister","The writer and his friend","The writer and his cousin"]],
+["What color are the walls?",["Green","Blue","White","Yellow"]],
+["What is on the desk?",["A computer and a lamp","A guitar and a poster","Two books and a lamp","A computer and a clock"]],
+["What is the writer’s favorite thing?",["A poster of the solar system","A guitar","The computer","The big window"]],
+["What does Iker do every evening?",["He plays the guitar","He does his homework","He cleans the room","He watches TV"]]]},
+
+{lvl:2,title:"Our Trip to the Aquarium",paras:[
+"Last Friday, my class went on a school trip to the aquarium in Veracruz. We left school at seven in the morning, and the bus ride took almost two hours. Everyone was very excited.",
+"First, we saw a huge tank with sharks. Some of my friends were scared, but I thought the sharks were beautiful. Then we visited the turtle area, where a guide told us that many sea turtles die because they eat plastic bags.",
+"After lunch, we watched a short movie about the ocean. My favorite part of the day was when we touched a starfish. It felt rough, like sandpaper!",
+"On the way back, we were all very tired. I slept on the bus, and I dreamed about sharks."],
+qs:[
+["How long was the bus ride to the aquarium?",["Almost two hours","Seven hours","Thirty minutes","All day"]],
+["How did the writer feel about the sharks?",["He thought they were beautiful","He was scared","He thought they were ugly","He didn’t see them"]],
+["What did the guide explain about sea turtles?",["Many die because they eat plastic","They can live for 300 years","They are afraid of sharks","They only eat starfish"]],
+["What was the writer’s favorite part of the day?",["Touching a starfish","Watching a movie","Eating lunch","Sleeping on the bus"]],
+["How did the starfish feel?",["Rough","Soft","Wet and cold","Smooth"]]]},
+
+{lvl:2,title:"The School Garden",paras:[
+"Two years ago, the students at our school started a small garden behind the gym. At first, it was just a dry piece of land with lots of rocks. We worked every Friday to clean it.",
+"Now we grow tomatoes, chiles, lettuce and herbs like mint and cilantro. Each class takes care of one part of the garden. My class is responsible for the tomatoes, so we water them and check them for insects.",
+"Last month, the school cafeteria used our vegetables to make a big salad for everyone. It was delicious, and we felt very proud.",
+"Next year, we want to build a small greenhouse so we can grow vegetables all year."],
+qs:[
+["What was the land like before the garden?",["Dry and full of rocks","Green and full of flowers","Full of trash","Wet and muddy"]],
+["What does the writer’s class take care of?",["The tomatoes","The herbs","The lettuce","The chiles"]],
+["What does the class do for the tomatoes?",["Waters them and checks for insects","Picks them every day","Sells them at the market","Paints the pots"]],
+["What happened last month?",["The cafeteria made a salad with the vegetables","The garden was destroyed","They built a greenhouse","They won a prize"]],
+["Why do they want a greenhouse?",["To grow vegetables all year","To keep insects out","To have more space for the gym","To sell more tomatoes"]]]},
+
+{lvl:2,title:"Summer Camp: Explorers Club",paras:[
+"Are you between 9 and 13 years old? Do you love nature and adventure? Join the Explorers Club this summer!",
+"When: July 8 to July 26, Monday to Friday, 9:00 a.m. to 2:00 p.m.",
+"Activities: hiking, building birdhouses, science experiments, swimming and a night under the stars (Friday, July 19 only — parents are welcome too!).",
+"What to bring: a hat, sunscreen, a water bottle and a healthy snack. Please don’t bring phones or video games.",
+"Sign up at the front desk of the Community Center before June 30. The first 20 people to sign up get a free T-shirt!"],
+qs:[
+["Who is the camp for?",["Children from 9 to 13","Children under 9","Teenagers over 13","Only parents"]],
+["How many hours is the camp each day?",["Five","Two","Nine","Seven"]],
+["When can parents join the activities?",["On the night of July 19","Every Friday","On the first day","Any afternoon"]],
+["What are campers NOT allowed to bring?",["Phones and video games","Hats","Water bottles","Snacks"]],
+["How can someone get a free T-shirt?",["By being one of the first 20 to sign up","By bringing a friend","By winning a race","By paying more"]]]},
+
+{lvl:2,title:"My Grandpa’s Hobby",paras:[
+"My grandpa Ernesto is seventy-two years old, and he has an unusual hobby: he builds model airplanes. When he was young, he wanted to be a pilot, but his family didn’t have enough money for flying school.",
+"Instead, he became a carpenter. He made tables, chairs and doors for more than forty years. When he retired, he started building small airplanes from wood.",
+"Each airplane takes him about three months to finish. He paints every detail by hand. Now he has more than thirty airplanes on the shelves in his living room.",
+"Last summer he taught me how to build one. It was difficult, but now I understand why he loves it so much."],
+qs:[
+["What did Grandpa Ernesto want to be when he was young?",["A pilot","A carpenter","A painter","A teacher"]],
+["Why didn’t he become one?",["His family couldn’t pay for the school","He was afraid of flying","He was too young","His eyes were bad"]],
+["What was his job for over forty years?",["Carpenter","Pilot","Mechanic","Artist"]],
+["How long does it take him to make one airplane?",["About three months","About a week","About a year","Three days"]],
+["How did the writer feel about building an airplane?",["It was hard, but now he understands his grandpa","It was easy and boring","He didn’t want to do it","He finished it in one day"]]]},
+
+{lvl:3,title:"Octopuses: Geniuses of the Sea",paras:[
+"Octopuses are some of the most intelligent animals in the ocean. They have a large brain, but that’s not all: about two thirds of their neurons are actually in their eight arms. This means each arm can touch, taste and react almost on its own.",
+"Scientists have watched octopuses solve puzzles, open jars to get food inside and even escape from their tanks in aquariums. In one famous case, an octopus in New Zealand squeezed through a small gap, crossed the floor and slid down a pipe back to the sea.",
+"Octopuses are also masters of disguise. Special cells in their skin allow them to change color and texture in less than a second, so they can hide from predators by looking like rocks or seaweed.",
+"Surprisingly, most octopuses live for only one or two years. They learn very fast, but they don’t have much time to use what they learn."],
+qs:[
+["Where are most of an octopus’s neurons?",["In its arms","In its brain","In its skin","In its eyes"]],
+["What can each arm do?",["Touch, taste and react almost by itself","Change the octopus’s size","See in the dark","Breathe out of the water"]],
+["What does the story about New Zealand show?",["An octopus escaped from an aquarium","Octopuses can live in pipes","Octopuses are dangerous","An octopus learned to swim"]],
+["Why do octopuses change color?",["To hide from predators","To find a partner","To keep warm","To show they are hungry"]],
+["What is surprising about octopuses’ lives?",["They are very short","They are very long","They live alone in caves","They never stop growing"]]]},
+
+{lvl:3,title:"The Lost Backpack",paras:[
+"When Marco got off the bus on Thursday afternoon, he realized something terrible: his backpack was still on the seat. Inside were his tablet, his math notebook and, worst of all, the science project he had worked on for three weeks.",
+"He ran after the bus, but it was already turning the corner. Marco called his mom, who told him to stay calm and call the bus company. A woman at the office took his name and promised to look for it.",
+"That night, Marco couldn’t sleep. The project was due the next morning, and he had no copy of it.",
+"At seven o’clock the next day, the phone rang. The driver had found the backpack and left it at the school entrance. Marco ran all the way there. Everything was inside, including a small note from the driver: “Good luck with your project!”"],
+qs:[
+["What did Marco forget on the bus?",["His backpack","His tablet only","His lunch","His jacket"]],
+["Why was Marco especially worried?",["His science project was inside","His mom would be angry","The tablet was new","He had a test that afternoon"]],
+["What did Marco’s mom tell him to do?",["Stay calm and call the bus company","Run after the bus","Go to the police","Make a new project"]],
+["Why couldn’t Marco sleep?",["The project was due the next morning","The phone kept ringing","He was sick","He had to study for math"]],
+["What does the driver’s note suggest about him?",["He was kind","He was angry","He was in a hurry","He read the project"]]]},
+
+{lvl:3,title:"Why Do We Yawn?",paras:[
+"Everyone yawns — babies, adults, and even dogs and fish. But why do we do it? For a long time, people believed that we yawn because our body needs more oxygen. However, experiments have shown that breathing extra oxygen doesn’t make people yawn less.",
+"Today, many scientists think yawning helps to cool down the brain. When we yawn, we take in a big breath of air and stretch our jaw, which increases blood flow to the head. This may help the brain work better when we are tired or bored.",
+"Yawning is also contagious. If you see someone yawn, or even read about yawning, you might start yawning yourself. Studies show that we are more likely to “catch” a yawn from family and close friends than from strangers.",
+"Are you yawning right now? Don’t worry — that’s completely normal!"],
+qs:[
+["What did people believe about yawning in the past?",["That it gives the body more oxygen","That it cools the brain","That only tired people yawn","That it is dangerous"]],
+["What did experiments show about oxygen?",["Extra oxygen doesn’t reduce yawning","Extra oxygen stops yawning","Fish don’t need oxygen","People yawn more with oxygen"]],
+["According to many scientists today, yawning may help to…",["cool down the brain","make us fall asleep","clean the lungs","warm up the body"]],
+["We are more likely to catch a yawn from…",["people we are close to","strangers","animals","people who are sleeping"]],
+["Why does the writer ask “Are you yawning right now?”",["Because reading about yawning can make you yawn","Because the text is boring","Because it is late","Because the reader is tired"]]]},
+
+{lvl:4,title:"The Long Journey of the Monarch Butterfly",paras:[
+"Every autumn, millions of monarch butterflies leave Canada and the northern United States and fly south to the mountain forests of Michoacán and the State of Mexico. Some travel more than 4,000 kilometers — an incredible distance for an insect that weighs less than a paper clip.",
+"What makes this journey even more remarkable is that no single butterfly completes the round trip. The monarchs that arrive in Mexico are the great-great-grandchildren of the ones that left Mexico the previous spring. Somehow, they find the same forests their ancestors visited, even though they have never been there before. Scientists believe they use the position of the sun and the Earth’s magnetic field to navigate.",
+"In Mexico, the butterflies cluster together on oyamel fir trees, sometimes so densely that branches bend under their weight. The cool, humid conditions in these forests allow them to survive the winter without using up too much energy.",
+"Unfortunately, the monarch population has fallen dramatically in recent decades because of illegal logging, pesticides and climate change. Conservation programs now work with local communities, who earn money from ecotourism instead of cutting down the trees."],
+qs:[
+["What is surprising about the weight of a monarch butterfly?",["It weighs less than a paper clip but flies thousands of kilometers","It is heavier than other butterflies","It gains weight during the trip","It weighs the same as a bird"]],
+["Why is it remarkable that monarchs find the Mexican forests?",["The butterflies arriving have never been there before","The forests move every year","They fly only at night","They travel alone"]],
+["How do scientists think monarchs navigate?",["Using the sun and the Earth’s magnetic field","By following rivers","By smelling the trees","By following other animals"]],
+["Why are the forests in Mexico good for the butterflies in winter?",["The cool, humid conditions help them save energy","The trees give them a lot of food","There are no predators at all","It is very warm there"]],
+["How are local communities helping the monarchs?",["They earn money from ecotourism instead of logging","They feed the butterflies","They move the butterflies to other forests","They plant new flowers in Canada"]]]},
+
+{lvl:4,title:"The Girl Who Cleaned a Beach",paras:[
+"When twelve-year-old Ximena visited her favorite beach in Veracruz after a storm, she was shocked. The sand was covered with bottles, bags and pieces of fishing net. A small bird was trapped in one of the nets, and Ximena and her father carefully freed it.",
+"That evening, she made a decision. She posted a message on her school’s community page inviting anyone who wanted to help to meet at the beach the following Saturday. She expected maybe ten people. More than eighty showed up.",
+"The group collected over 600 kilograms of trash in one morning. But Ximena didn’t want it to be a one-time event. She convinced a local restaurant to give free drinks to volunteers, and she started organizing clean-ups on the first Saturday of every month.",
+"Two years later, the project has spread to four other beaches. When journalists ask Ximena what she has learned, she always gives the same answer: “You don’t need to be an adult to start something important. You just need to start.”"],
+qs:[
+["What made Ximena decide to act?",["Seeing the beach covered in trash after a storm","A school assignment","A TV documentary","Her father’s job"]],
+["How many people did Ximena expect at the first clean-up?",["About ten","More than eighty","Around six hundred","Only her family"]],
+["Why did Ximena talk to a local restaurant?",["To give volunteers a reward","To ask for money","To complain about the trash","To find a place to meet"]],
+["What does “the project has spread” mean?",["It now happens in more places","It has finished","It became more expensive","It moved to another city"]],
+["What is the main message of Ximena’s answer to journalists?",["Young people can start important things","Adults should clean beaches","Starting a project is very difficult","You need a lot of money to help"]]]},
+
+{lvl:4,title:"Should Phones Be Allowed at School?",paras:[
+"In many countries, schools are debating whether students should be allowed to bring phones to class. Some schools have banned them completely, while others let students use them for specific activities.",
+"Those who support a ban argue that phones are a major distraction. Studies in several countries have found that students’ test results sometimes improve after phones are removed from classrooms. Supporters also say that without phones, students talk to each other more during breaks and are less exposed to online bullying during the school day.",
+"On the other hand, many students and some teachers believe that phones can be useful learning tools. They can be used to look up information, record science experiments or practice languages with apps. Some parents also want their children to have a phone in case of an emergency.",
+"Perhaps the best solution lies somewhere in the middle: clear rules about when phones can be used, and teaching students to manage their own screen time responsibly."],
+qs:[
+["What is the main topic of the text?",["Whether phones should be allowed at school","How to buy a good phone","The history of mobile phones","Online games"]],
+["According to the text, what sometimes happens when phones are removed?",["Test results improve","Students feel more stressed","Bullying increases","Students stop talking"]],
+["Which is an argument in favor of phones at school?",["They can be used as learning tools","They help students sleep","They make breaks shorter","They are cheaper than books"]],
+["Why do some parents want their children to have phones?",["In case of an emergency","To play during class","To check grades","To take photos of teachers"]],
+["What does the writer suggest at the end?",["Clear rules and responsible use","A total ban everywhere","No rules at all","Letting parents decide everything"]]]},
+
+{lvl:5,title:"Teenagers and Sleep",paras:[
+"Parents often complain that teenagers stay up late and are impossible to wake in the morning. While it is tempting to blame video games or social media, research suggests there is a deeper, biological explanation.",
+"During adolescence, the body’s internal clock — known as the circadian rhythm — shifts. The brain begins to release melatonin, the hormone that makes us feel sleepy, roughly two hours later than it did in childhood. As a result, many teenagers genuinely do not feel tired until eleven o’clock at night or later, even if they are exhausted.",
+"This shift collides with early school schedules. Since adolescents still need around nine hours of sleep, a student who falls asleep at midnight and wakes at six is chronically sleep-deprived. Lack of sleep has been linked to poorer concentration, irritability and even a weakened immune system.",
+"Some school districts have responded by delaying the start of classes. Early results are encouraging: attendance has risen, and students report feeling more alert. Critics, however, point out that later start times can complicate transportation and after-school activities, so the debate is far from settled."],
+qs:[
+["What is the main idea of the second paragraph?",["Teenagers’ internal clocks change, making them sleepy later","Teenagers are lazy","Melatonin keeps teenagers awake","Children need less sleep than teenagers"]],
+["The word “collides” in paragraph 3 suggests that…",["teen sleep patterns and school times conflict","teenagers like early classes","schools start too late","buses are often late"]],
+["How much sleep do adolescents still need, according to the text?",["Around nine hours","Around six hours","Around eleven hours","Around two hours"]],
+["What has happened in schools that delayed classes?",["Attendance has risen and students feel more alert","Students sleep even later","Grades have fallen","After-school activities became easier"]],
+["What is the writer’s attitude toward the debate?",["It is not yet resolved","Schools should never change","Critics are completely wrong","The problem has been solved"]]]}
+];
+
+/* Listening (Juniors): speaker W = woman/girl, M = man/boy */
+const J_LISTENING=[
+{lvl:1,id:"jr-listening-01",title:"A new classmate",lines:[
+["W","Hi! Are you new here?"],["M","Yes, I am. My name is Leo."],["W","Nice to meet you, Leo. I’m Daniela. How old are you?"],["M","I’m eleven. And you?"],["W","I’m eleven too! Do you like soccer?"],["M","No, I don’t. I like basketball."]],
+qs:[
+["What is the boy’s name?",["Leo","Daniel","Luis","Lalo"]],
+["How old is Daniela?",["Eleven","Ten","Twelve","Thirteen"]],
+["What sport does Leo like?",["Basketball","Soccer","Tennis","Swimming"]]]},
+
+{lvl:1,id:"jr-listening-02",title:"At the pet shop",lines:[
+["M","Hello! Can I help you?"],["W","Yes, please. I want some food for my fish."],["M","Of course. Here you are. Anything else?"],["W","How much is the small ball over there?"],["M","It’s three dollars."],["W","OK, I’ll take it. It’s for my dog, Max."]],
+qs:[
+["What does the girl want for her fish?",["Food","A ball","A new tank","Water"]],
+["How much is the small ball?",["Three dollars","Two dollars","Thirteen dollars","Four dollars"]],
+["Who is Max?",["Her dog","Her fish","Her brother","The shop owner"]]]},
+
+{lvl:1,id:"jr-listening-03",title:"My lunchbox",lines:[
+["M","Hi, I’m Pablo. Today I want to tell you what is in my lunchbox. I have a ham sandwich, an orange and some cookies. I also have a bottle of water. I don’t like juice. My mom makes my lunch every morning. Thank you, Mom!"]],
+qs:[
+["What kind of sandwich does Pablo have?",["Ham","Cheese","Chicken","Egg"]],
+["What does Pablo drink?",["Water","Juice","Milk","Soda"]],
+["Who makes Pablo’s lunch?",["His mom","His dad","Pablo","His grandmother"]]]},
+
+{lvl:2,id:"jr-listening-04",title:"Weekend plans",lines:[
+["W","Hey, Andrés. What are you doing this weekend?"],["M","On Saturday I’m going to my cousin’s house. It’s his birthday."],["W","Cool! What about Sunday?"],["M","Nothing special. Why?"],["W","My family is going to the science museum. Do you want to come with us?"],["M","I’d love to! What time?"],["W","We’re leaving at ten in the morning."]],
+qs:[
+["Why is Andrés going to his cousin’s house?",["It’s his cousin’s birthday","To do homework","To play video games","To sleep over"]],
+["Where is the girl’s family going on Sunday?",["To the science museum","To the beach","To the cinema","To the zoo"]],
+["What time are they leaving?",["At ten in the morning","At two in the afternoon","At nine in the morning","At ten at night"]]]},
+
+{lvl:2,id:"jr-listening-05",title:"A school announcement",lines:[
+["W","Good morning, students. This is an important message. Tomorrow there is no English class in the morning because Miss Karen is at a training course. Instead, all students will go to the library for a reading activity. Please bring a book that you like. Also, remember that the school photos are on Friday, so wear your complete uniform. Thank you, and have a great day!"]],
+qs:[
+["Why is there no English class tomorrow?",["The teacher is at a training course","The teacher is sick","It’s a holiday","The classroom is closed"]],
+["What should students bring tomorrow?",["A book they like","Their English notebook","A pen and paper","Money for the library"]],
+["What happens on Friday?",["School photos","A reading test","A sports day","A field trip"]]]},
+
+{lvl:2,id:"jr-listening-06",title:"Lost and found",lines:[
+["M","Excuse me, I lost my jacket yesterday. Is it here?"],["W","Maybe. What color is it?"],["M","It’s dark blue with a white zipper."],["W","Hmm, there are two blue jackets. Is your name on it?"],["M","Yes, it says “Bruno” inside, near the pocket."],["W","Here it is! Bruno. You’re lucky."]],
+qs:[
+["What did the boy lose?",["A jacket","A backpack","A cap","A sweater"]],
+["What color is the zipper?",["White","Dark blue","Black","Gray"]],
+["How does the woman know which one is his?",["His name is inside","It has a hole","It’s a different size","It’s the only one"]]]},
+
+{lvl:3,id:"jr-listening-07",title:"Choosing a project",lines:[
+["W","So, what topic should we choose for the science fair?"],["M","What about volcanoes? We could build one that erupts."],["W","Everybody does volcanoes. I think we should do something different, like how plants grow with music."],["M","That sounds interesting, but it takes weeks to see results."],["W","We have a month. If we start this Monday, we’ll have enough time."],["M","OK, you convinced me. I’ll bring the seeds and pots."]],
+qs:[
+["Why doesn’t the girl want to do volcanoes?",["Too many students choose that topic","It is too dangerous","It is too expensive","The teacher doesn’t allow it"]],
+["What is the boy worried about at first?",["The experiment takes a long time","They don’t have plants","Music is too loud","The girl won’t help"]],
+["What will the boy bring?",["Seeds and pots","A speaker","Books about volcanoes","A camera"]]]},
+
+{lvl:3,id:"jr-listening-08",title:"A tour guide at the ruins",lines:[
+["W","Welcome to Teotihuacán, everyone! Please stay together, because it’s very easy to get lost here. In front of you is the Pyramid of the Sun. It’s the biggest pyramid in this city and one of the largest in the world. Today we won’t climb it, but you can take as many photos as you like. Later, we’ll walk along the Avenue of the Dead to the Pyramid of the Moon. Remember to drink water — the sun is very strong today."]],
+qs:[
+["Why does the guide ask everyone to stay together?",["It’s easy to get lost","It’s going to rain","The pyramid is closed","There are dangerous animals"]],
+["What can visitors NOT do today?",["Climb the Pyramid of the Sun","Take photos","Walk on the avenue","Visit the Pyramid of the Moon"]],
+["Why does the guide tell them to drink water?",["The sun is very strong","The walk is very short","They will eat later","The water is free"]]]},
+
+{lvl:3,id:"jr-listening-09",title:"Fixing a problem",lines:[
+["M","Mom, my tablet isn’t working. The screen is black."],["W","Did you charge it last night?"],["M","I think so… Oh no. The cable wasn’t connected properly."],["W","Well, plug it in now and wait about twenty minutes before you try again."],["M","But I need it for my homework! It’s due at five."],["W","Then use my laptop for now, and be careful with it."]],
+qs:[
+["What is wrong with the tablet?",["It has no battery","The screen is broken","It fell in water","It has a virus"]],
+["How long should the boy wait?",["About twenty minutes","Five minutes","Two hours","Until tomorrow"]],
+["What does his mom suggest?",["Using her laptop","Asking the teacher for more time","Buying a new cable","Doing the homework on paper"]]]},
+
+{lvl:4,id:"jr-listening-10",title:"A radio report on bees",lines:[
+["W","Good afternoon, listeners. Today we’re talking about bees, and why they matter so much more than most people think. Around one third of the food we eat depends on pollination, and bees do a large part of that work. Without them, fruits like apples, strawberries and avocados would become much more expensive. Sadly, bee populations are declining in many places because of pesticides and the loss of wild flowers. The good news is that anyone can help: even a few pots of flowers on a balcony can give bees the food they need."]],
+qs:[
+["What is the main purpose of the report?",["To explain why bees are important","To sell honey","To warn people about bee stings","To describe how honey is made"]],
+["According to the speaker, what would happen without bees?",["Some fruits would become more expensive","There would be more flowers","Apples would grow faster","People would eat more honey"]],
+["What does the speaker suggest ordinary people can do?",["Plant flowers, even on a balcony","Stop eating fruit","Buy more pesticides","Keep bees at home"]]]},
+
+{lvl:4,id:"jr-listening-11",title:"Student council election",lines:[
+["M","So, Camila, why should students vote for you for the student council?"],["W","Well, I’ve noticed that a lot of students complain about the cafeteria, but nobody ever asks them what they’d actually like to eat. I want to run a survey and present the results to the principal."],["M","That sounds practical. Anything else?"],["W","Yes. I’d like to organize a tutoring program where older students help younger ones with math. I struggled with math myself, and a friend helped me a lot."],["M","And what if the principal says no to your ideas?"],["W","Then I’ll ask what we can change so the answer becomes yes."]],
+qs:[
+["What does Camila want to do about the cafeteria?",["Ask students what they want and share the results","Close it","Make the food cheaper","Cook the food herself"]],
+["Why does Camila care about the tutoring program?",["She was helped with math in the past","She is the best math student","Her teacher asked her to","She wants to earn money"]],
+["What does her last answer show about her?",["She is determined and flexible","She gives up easily","She doesn’t respect the principal","She has no other ideas"]]]},
+
+{lvl:5,id:"jr-listening-12",title:"A talk about inventions",lines:[
+["M","When we think of inventors, we often imagine a lonely genius who suddenly has a brilliant idea. In reality, most inventions are the result of many people building on each other’s work over years, sometimes decades. Take the light bulb: Thomas Edison is usually given the credit, but more than twenty inventors had already created versions of it before him. What Edison did was improve it and, crucially, make it practical and affordable. So the next time you have an idea that seems small, don’t dismiss it. It might be exactly the piece that someone else needs to complete theirs."]],
+qs:[
+["What common belief does the speaker challenge?",["That inventions come from a single genius","That inventions are expensive","That Edison was not famous","That light bulbs are old"]],
+["What was Edison’s main contribution to the light bulb, according to the speaker?",["Making it practical and affordable","Inventing it first","Naming it","Selling it in other countries"]],
+["What is the speaker’s final message?",["Small ideas can help complete bigger ones","Only big ideas matter","Inventing is too difficult for most people","You should keep your ideas secret"]]]}
+];
+
+const STAGES={
+ tya:{name:"Teens & Young Adults",ages:"14 años en adelante",time:"60 y 80",timeEn:"60 to 80",maxLv:5,
+  desc:"for completing the Level Up English Placement Test, Teens & Young Adults stage, and achieving the level shown.",
+  sections:[
  {id:"vocab",name:"Vocabulary",es:"Vocabulario",type:"item",n:27,bank:VOCAB,color:"var(--sage)",hex:"#8EA693",dark:"#5F7D66",mins:12,
   instr:"Elige la palabra que completa mejor cada oración."},
  {id:"grammar",name:"Grammar",es:"Gramática",type:"item",n:30,bank:GRAMMAR,color:"var(--plum)",hex:"#9A8197",dark:"#77607A",mins:18,
@@ -498,16 +1036,30 @@ const SECTIONS=[
   instr:"Lee cada texto con atención y contesta las preguntas. El texto se queda a la vista mientras respondes."},
  {id:"listening",name:"Listening",es:"Comprensión auditiva",type:"set",sets:6,per:3,bank:LISTENING,color:"var(--slate)",hex:"#7C96A8",dark:"#55707F",mins:15,
   instr:"Escucha cada audio con los audífonos puestos. Cada audio se puede reproducir máximo dos veces."}
-];
-const TOTAL_Q=SECTIONS.reduce((s,x)=>s+(x.type==="item"?x.n:x.sets*x.per),0);
+]},
+ jr:{name:"Juniors",ages:"10 a 13 años",time:"40 y 50",timeEn:"40 to 50",maxLv:4,
+  desc:"for completing the Level Up English Placement Test, Juniors stage, and achieving the level shown.",
+  sections:[
+  {id:"vocab",name:"Vocabulary",es:"Vocabulario",type:"item",n:18,bank:J_VOCAB,mins:9,instr:"Elige la palabra que completa mejor cada oración."},
+  {id:"grammar",name:"Grammar",es:"Gramática",type:"item",n:20,bank:J_GRAMMAR,mins:12,instr:"Elige la opción correcta para completar cada oración."},
+  {id:"reading",name:"Reading",es:"Comprensión de lectura",type:"set",sets:3,per:5,bank:J_READING,mins:15,instr:"Lee cada texto con atención y contesta las preguntas. El texto se queda a la vista mientras respondes."},
+  {id:"listening",name:"Listening",es:"Comprensión auditiva",type:"set",sets:4,per:3,bank:J_LISTENING,mins:10,instr:"Escucha cada audio con los audífonos puestos. Cada audio se puede reproducir máximo dos veces."}
+ ]}
+};
+let SECTIONS,TOTAL_Q,STAGE_NAME,DESC_TXT,STG;
+function applyStage(id){
+  STG=STAGES[id]||STAGES.tya; SECTIONS=STG.sections; STAGE_NAME=STG.name; DESC_TXT=STG.desc;
+  TOTAL_Q=SECTIONS.reduce((s,x)=>s+(x.type==="item"?x.n:x.sets*x.per),0);
+}
 
 /* ============ State ============ */
 const KEY="sh_levelup_v1";
 let S=load();
+applyStage(S.stage);
 function blank(){return {phase:"welcome",name:"",stage:"tya",sectionIdx:0,started:null,ended:null,folio:"",secs:{},cur:null}}
 function load(){try{const v=JSON.parse(localStorage.getItem(KEY));return v&&v.phase?v:blank()}catch(e){return blank()}}
 function save(){try{localStorage.setItem(KEY,JSON.stringify(S))}catch(e){}}
-function reset(){S=blank();save();render()}
+function reset(){S=blank();applyStage(S.stage);save();render()}
 
 const $=s=>document.querySelector(s);
 const app=$("#app");
@@ -527,13 +1079,17 @@ function secState(sec){
   if(!S.secs[sec.id]) S.secs[sec.id]={level:2,used:[],answers:[],setResults:[]};
   return S.secs[sec.id];
 }
-function pickIndex(bank,used,level,dir){
+const SEEN_KEY="sh_levelup_seen";
+function seenList(sid){try{const m=JSON.parse(localStorage.getItem(SEEN_KEY))||{};return m[S.stage+"/"+sid]||[]}catch(e){return []}}
+function markSeen(sid,idx){try{const m=JSON.parse(localStorage.getItem(SEEN_KEY))||{};const k=S.stage+"/"+sid;const l=(m[k]||[]).filter(x=>x!==idx);l.push(idx);m[k]=l.slice(-60);localStorage.setItem(SEEN_KEY,JSON.stringify(m))}catch(e){}}
+function pickIndex(bank,used,level,dir,sid){
+  const seen=sid?seenList(sid):[];
   const order=[level];
   for(let d=1;d<5;d++){ const a=level+(dir>=0?d:-d), b=level+(dir>=0?-d:d); order.push(a,b); }
   for(const l of order){
     if(l<1||l>5) continue;
     const pool=bank.map((x,i)=>i).filter(i=>!used.includes(i)&&(bank[i][0]===l||bank[i].lvl===l));
-    if(pool.length) return pool[Math.floor(Math.random()*pool.length)];
+    if(pool.length){const fresh=pool.filter(i=>!seen.includes(i));const P=fresh.length?fresh:pool;return P[Math.floor(Math.random()*P.length)]}
   }
   return -1;
 }
@@ -541,13 +1097,13 @@ function serveNext(){
   const sec=SECTIONS[S.sectionIdx], st=secState(sec);
   if(sec.type==="item"){
     const last=st.answers[st.answers.length-1];
-    const idx=pickIndex(sec.bank,st.used,st.level,last?(last.ok?1:-1):0);
-    st.used.push(idx);
+    const idx=pickIndex(sec.bank,st.used,st.level,last?(last.ok?1:-1):0,sec.id);
+    st.used.push(idx);markSeen(sec.id,idx);
     S.cur={idx,order:shuffle([0,1,2,3]),choice:null};
   }else{
     const last=st.setResults[st.setResults.length-1];
-    const idx=pickIndex(sec.bank,st.used,st.level,last?(last.r>=.6?1:-1):0);
-    st.used.push(idx);
+    const idx=pickIndex(sec.bank,st.used,st.level,last?(last.r>=.6?1:-1):0,sec.id);
+    st.used.push(idx);markSeen(sec.id,idx);
     const n=sec.bank[idx].qs.length;
     S.cur={idx,qi:0,orders:Array.from({length:n},()=>shuffle([0,1,2,3])),choice:null,correct:0,plays:0};
   }
@@ -604,7 +1160,8 @@ function results(){
     return {sec,a,lv:levelOf(a),ok:st.answers.filter(x=>x.ok).length,n:st.answers.length};
   });
   const overall=per.reduce((s,p)=>s+p.a*WEIGHTS[p.sec.id],0);
-  return {per,overall,lv:levelOf(overall)};
+  per.forEach(p=>{p.lv=Math.min(p.lv,STG.maxLv)});
+  return {per,overall,lv:Math.min(levelOf(overall),STG.maxLv)};
 }
 
 /* ============ Audio (MP3 if present, device voice otherwise) ============ */
@@ -673,6 +1230,7 @@ function playSet(set,onEnd){
 
 /* ============ Views ============ */
 const ICON={
+ tick:`<svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="3" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12.5l4.5 4.5L19 7.5"/></svg>`,
  check:`<svg width="26" height="26" viewBox="0 0 26 26" fill="none"><circle cx="13" cy="13" r="12" fill="#E7ECE8"/><path d="M8 13.5l3.2 3.2L18 9.8" stroke="#496C70" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/></svg>`,
  play:`<svg viewBox="0 0 24 24"><path d="M7 4.5v15l13-7.5z" fill="#fff"/></svg>`,
  head:`<svg width="34" height="34" viewBox="0 0 24 24" fill="none" stroke="#fff" stroke-width="1.8" stroke-linecap="round"><path d="M4 15v-3a8 8 0 0 1 16 0v3"/><rect x="3" y="14" width="4" height="6" rx="1.6"/><rect x="17" y="14" width="4" height="6" rx="1.6"/></svg>`,
@@ -711,7 +1269,7 @@ function vWelcome(){
       <p>Complete all four sections to receive your English level and certificate.</p>
     </div>
     <div class="grid">${SECTIONS.map(s=>`<div class="sc" style="border-color:${SEC_STYLE[s.id].b}"><div class="ttl"><small>${s.name}</small><span class="q">${cnt(s)} questions</span></div><b style="background:${SEC_STYLE[s.id].c}">${cnt(s)}</b></div>`).join("")}</div>
-    <p class="meta2">${TOTAL_Q} questions in total, about 60 to 80 minutes</p>
+    <p class="meta2">${TOTAL_Q} questions in total, about ${STG.timeEn} minutes</p>
     <div class="fld">
       <label for="nm">Nombre completo del alumno(a)</label>
       <input id="nm" autocomplete="off" autocapitalize="words" placeholder="Nombre y apellidos" value="${esc(S.name)}">
@@ -719,8 +1277,7 @@ function vWelcome(){
     <div class="fld">
       <label>Etapa</label>
       <div class="stg">
-        <button class="opt" aria-pressed="true"><div><strong>Teens &amp; Young Adults</strong><span>14 años en adelante</span></div><em>Seleccionada</em></button>
-        <button class="opt" disabled><div><strong>Juniors</strong><span>10 a 13 años</span></div><em>Disponible pronto</em></button>
+        ${["tya","jr"].map(k=>`<button class="opt" data-stage="${k}" aria-pressed="${S.stage===k}"><div><strong>${esc(STAGES[k].name)}</strong><span>${STAGES[k].ages}</span></div><em>${S.stage===k?"Seleccionada":"Elegir"}</em></button>`).join("")}
         <button class="opt" disabled><div><strong>Young Learners</strong><span>6 a 9 años</span></div><em>Disponible pronto</em></button>
       </div>
     </div>
@@ -730,6 +1287,7 @@ function vWelcome(){
   const nm=$("#nm"),go=$("#go");
   const chk=()=>go.disabled=nm.value.trim().length<3;
   nm.oninput=chk;chk();
+  app.querySelectorAll("[data-stage]").forEach(b=>b.onclick=()=>{S.name=nm.value;S.stage=b.dataset.stage;applyStage(S.stage);save();render();const n=$("#nm");n.focus();n.setSelectionRange(n.value.length,n.value.length)});
   go.onclick=()=>{S.name=nm.value.trim().replace(/\s+/g," ");S.phase="prep";save();render();window.scrollTo(0,0)};
 }
 
@@ -741,7 +1299,7 @@ function vPrep(){
     <img class="wm" src="${LOGO}" alt="Ser Humano Centro Pedagógico">
     <div class="kick">ANTES DE COMENZAR</div>
     <p class="name">${esc(S.name)}</p>
-    <p class="meta2">El examen dura entre 60 y 80 minutos. Tómate tu tiempo y lee con calma.</p>
+    <p class="meta2">El examen dura entre ${STG.time} minutos. Tómate tu tiempo y lee con calma.</p>
       <ul class="checks">
         <li>${ICON.check}<span>Ponte los audífonos y verifica que escuchas bien el audio de prueba.</span></li>
         <li>${ICON.check}<span>Contesta tú solo, sin traductores ni ayuda de otras personas. Así tu nivel será el correcto.</span></li>
@@ -756,7 +1314,7 @@ function vPrep(){
       <button class="dlbtn" id="back" style="background:#F3F1EC;color:#1F2E3A">Regresar</button>
    </div>
   </div>`;
-  $("#test").onclick=()=>{stopAudio();playing=true;speakLines([["W","Hello! If you can hear this clearly, you are ready to begin your test. Good luck!"]],()=>{playing=false})};
+  $("#test").onclick=()=>{if(playing)return;stopAudio();const b=$("#test");b.classList.add("on");playSet({id:"audio-test",lvl:3,lines:[["W","Hello! If you can hear this clearly, you are ready to begin your test. Good luck!"]]},()=>{playing=false;b.classList.remove("on")})};
   $("#back").onclick=()=>{S.phase="welcome";save();render()};
   $("#start").onclick=()=>{
     S.started=Date.now();S.sectionIdx=0;S.secs={};
@@ -766,15 +1324,15 @@ function vPrep(){
 }
 
 function header(){
-  const done=SECTIONS.map((s,i)=>{
+  const done=SECTIONS.map((x,i)=>{
     if(i<S.sectionIdx) return 1;
     if(i>S.sectionIdx) return 0;
-    const st=S.secs[s.id]; const n=s.type==="item"?s.n:s.sets*s.per;
+    const st=S.secs[x.id]; const n=x.type==="item"?x.n:x.sets*x.per;
     return st?st.answers.length/n:0;
   });
   return `<div class="bar"><div class="bar-in">
     <img src="${PLANT}" alt="">
-    <div class="sections">${SECTIONS.map((s,i)=>`<div class="sec" title="${s.name}"><b style="background:${s.color};width:${done[i]*100}%"></b></div>`).join("")}</div>
+    <div class="sections">${SECTIONS.map((x,i)=>`<div class="sec${i===S.sectionIdx?" cur":""}" title="${x.name}"><b style="background:${SEC_STYLE[x.id].c};width:${done[i]*100}%"></b></div>`).join("")}</div>
     <div class="clock" id="clock"></div>
   </div></div>`;
 }
@@ -786,18 +1344,22 @@ function tickClock(){
 }
 
 function vIntro(){
-  const sec=SECTIONS[S.sectionIdx];
+  const sec=SECTIONS[S.sectionIdx], st=SEC_STYLE[sec.id];
   const n=sec.type==="item"?sec.n:sec.sets*sec.per;
-  app.innerHTML=header()+`<div class="wrap intro">
-    <div class="badge" style="background:${sec.color}">${SEC_ICON[sec.id]}</div>
-    <h2>${sec.name}</h2>
-    <p class="lead">${sec.instr}</p>
-    <div class="facts">
-      <div><b>${n}</b><small>preguntas</small></div>
-      ${sec.type==="set"?`<div><b>${sec.sets}</b><small>${sec.id==="reading"?"textos":"audios"}</small></div>`:""}
-      <div><b>${sec.mins}</b><small>minutos aprox.</small></div>
-    </div>
-    <div class="btn-row"><button class="btn" id="go">Comenzar ${sec.name}</button></div>
+  const d=(l,tp,sz,c,ring)=>`<span class="dot" style="left:${l}px;top:${tp}px;width:${sz}px;height:${sz}px;${ring?`border:${ring}px solid ${CC[c]}`:`background:${CC[c]}`}"></span>`;
+  const fact=(v,l)=>`<div class="fact" style="border-color:${st.b}"><b>${v}</b><small>${l}</small></div>`;
+  app.innerHTML=header()+`<div class="wrap">
+   <div class="res secintro">
+    ${d(-30,-30,80,"coral")}${d(48,18,24,"gold")}${d(14,62,12,"sky")}<span class="dot" style="right:-20px;top:-20px;width:60px;height:60px;border:6px solid #6FA8C9"></span><span class="dot" style="right:16px;top:50px;width:14px;height:14px;background:#E39AAE"></span>
+    <div class="kick">SECTION ${S.sectionIdx+1} OF ${SECTIONS.length}</div>
+    <div class="sbadge" style="background:${st.c}">${SEC_ICON[sec.id]}</div>
+    <h2 class="stitle">${sec.name}</h2>
+    <p class="ses">${sec.es}</p>
+    <p class="meta2 lead2">${sec.instr}</p>
+    <div class="facts">${fact(n,"preguntas")}${sec.type==="set"?fact(sec.sets,sec.id==="reading"?"textos":"audios"):""}${fact(sec.mins,"minutos aprox.")}</div>
+    <div class="steps">${SECTIONS.map((x,i)=>`<span class="${i<S.sectionIdx?"ok":i===S.sectionIdx?"now":""}" style="--c:${SEC_STYLE[x.id].c};--b:${SEC_STYLE[x.id].b}">${i<S.sectionIdx?ICON.tick:""}${x.name}</span>`).join("")}</div>
+    <button class="dlbtn" id="go" style="background:#1F2E3A;color:#fff;margin-top:22px">Comenzar ${sec.name}</button>
+   </div>
   </div>`;
   $("#go").onclick=()=>{window.scrollTo(0,0);serveNext()};
   tickClock();
@@ -812,33 +1374,34 @@ function vQuestion(){
   const sec=SECTIONS[S.sectionIdx], st=secState(sec), c=S.cur;
   const n=sec.type==="item"?sec.n:sec.sets*sec.per;
   const num=st.answers.length+1;
+  const stl=SEC_STYLE[sec.id];
+  const qhead=`<div class="qhead"><span class="chip" style="background:${stl.c}">${sec.name}</span><span class="qn">Pregunta ${num} de ${n}</span></div>`;
   let body="";
   if(sec.type==="item"){
     const it=sec.bank[c.idx];
-    body=`<div class="qcard"><p class="instr">Choose the best option to complete the sentence.</p>
+    body=`<div class="qcard">${qhead}<p class="instr">Choose the best option to complete the sentence.</p>
       <p class="prompt">${promptHTML(it[1])}</p>${optionsHTML(it[2],c.order,c.choice)}
-      <div class="next"><button class="btn" id="nx" ${c.choice===null?"disabled":""}>Siguiente</button></div></div>`;
+      <div class="next"><button class="dlbtn nx" id="nx" ${c.choice===null?"disabled":""}>Siguiente</button></div></div>`;
   }else if(sec.id==="reading"){
     const set=sec.bank[c.idx], q=set.qs[c.qi];
     body=`<div class="split">
-      <article class="passage"><h4>${esc(set.title)}</h4>${set.paras.map(p=>{const e=esc(p);if(set.notice){const i=e.indexOf(":");return `<p><b>${e.slice(0,i+1)}</b>${e.slice(i+1)}</p>`}return `<p>${e}</p>`}).join("")}</article>
-      <div class="qcard"><p class="instr">Question ${c.qi+1} of ${set.qs.length} about this text</p>
+      <article class="passage" style="--c:${stl.c}"><span class="ptag">Reading text</span><h4>${esc(set.title)}</h4>${set.paras.map(p=>{const e=esc(p);if(set.notice){const i=e.indexOf(":");return `<p><b>${e.slice(0,i+1)}</b>${e.slice(i+1)}</p>`}return `<p>${e}</p>`}).join("")}</article>
+      <div class="qcard">${qhead}<p class="instr">Question ${c.qi+1} of ${set.qs.length} about this text</p>
         <p class="prompt">${esc(q[0])}</p>${optionsHTML(q[1],c.orders[c.qi],c.choice)}
-        <div class="next"><button class="btn" id="nx" ${c.choice===null?"disabled":""}>Siguiente</button></div></div>
+        <div class="next"><button class="dlbtn nx" id="nx" ${c.choice===null?"disabled":""}>Siguiente</button></div></div>
     </div>`;
   }else{
     const set=sec.bank[c.idx], q=set.qs[c.qi], left=2-c.plays;
-    body=`<div class="player${playing?" playing":""}" id="player">
+    body=`<div class="player${playing?" playing":""}" id="player" style="--c:${stl.c}">
         <button class="play" id="pl" ${left<=0||playing?"disabled":""} aria-label="Reproducir audio">${ICON.play}</button>
-        <div><b>${esc(set.title)}</b><small id="plays">${playing?"Reproduciendo…":left>0?`Reproducciones restantes: ${left}`:"Ya usaste las dos reproducciones"}</small></div>
+        <div><b>${esc(set.title)}</b><small id="plays">${playing?"Reproduciendo…":left>0?`Puedes escucharlo ${left===2?"2 veces":"1 vez más"}`:"Ya lo escuchaste 2 veces"}</small></div>
         <div class="wave"><i></i><i></i><i></i><i></i><i></i></div>
       </div>
-      <div class="qcard"><p class="instr">Question ${c.qi+1} of ${set.qs.length} about this audio</p>
+      <div class="qcard">${qhead}<p class="instr">Question ${c.qi+1} of ${set.qs.length} about this audio</p>
         <p class="prompt">${esc(q[0])}</p>${optionsHTML(q[1],c.orders[c.qi],c.choice)}
-        <div class="next"><button class="btn" id="nx" ${c.choice===null?"disabled":""}>Siguiente</button></div></div>`;
+        <div class="next"><button class="dlbtn nx" id="nx" ${c.choice===null?"disabled":""}>Siguiente</button></div></div>`;
   }
-  app.innerHTML=header()+`<div class="wrap" style="padding-top:6px">
-    <div class="meta"><h3 style="color:${sec.dark}">${sec.name}</h3><span>Pregunta ${num} de ${n}</span></div>${body}</div>`;
+  app.innerHTML=header()+`<div class="wrap qwrap" style="--c:${stl.c};--b:${stl.b}">${body}</div>`;
   app.querySelectorAll(".opt").forEach(b=>b.onclick=()=>{
     c.choice=+b.dataset.i;save();
     app.querySelectorAll(".opt").forEach(x=>x.setAttribute("aria-pressed",x===b));
@@ -858,7 +1421,7 @@ function vQuestion(){
       box.classList.remove("playing");
       const left=2-S.cur.plays;
       btn.disabled=left<=0;
-      lab.textContent=left>0?`Reproducciones restantes: ${left}`:"Ya usaste las dos reproducciones";
+      lab.textContent=left>0?`Puedes escucharlo ${left===2?"2 veces":"1 vez más"}`:"Ya lo escuchaste 2 veces";
     });
   };
   tickClock();
@@ -916,7 +1479,6 @@ const SEC_STYLE={vocab:{c:"#8DB596",b:"#CFE3D3"},grammar:{c:"#E07A5F",b:"#F4CFC4
 const CC={coral:"#E07A5F",gold:"#D9A441",sky:"#6FA8C9",rose:"#E39AAE",sage:"#8DB596",teal:"#496C70",plum:"#7B5E8B"};
 const INK="#1F2E3A",SOFT="#6B7A84",DESC="#3C4A55";
 const COORDS=["Lissy Pérez","Letty Rodríguez"];
-const STAGE_NAME="Teens & Young Adults";
 const CERT_DOTS=[[-95,215,195,"coral"],[92,186,46,"gold"],[36,384,72,"sky",7],[124,300,16,"plum"],[78,462,22,"rose"],[22,160,12,"teal"],
  [952,240,205,"teal"],[910,198,46,"gold"],[930,428,72,"rose",7],[1000,492,22,"sage"],[900,336,14,"coral"],
  [-62,700,172,"sky"],[108,768,30,"gold"],[14,640,18,"sage"],[948,690,172,"sage"],[912,756,30,"coral"],[1028,640,16,"plum"],
@@ -926,7 +1488,6 @@ const STORY_DOTS=[[-130,560,270,"coral"],[150,500,62,"gold"],[40,820,104,"sky",1
  [-130,1730,280,"coral"],[150,1810,52,"gold"],[10,1590,84,"sky",11],[200,1860,20,"plum"],[110,1760,16,"rose"],
  [910,1720,290,"teal"],[830,1820,52,"gold"],[985,1580,84,"rose",11],[860,1770,18,"sage"],[760,1870,18,"coral"],
  [420,40,18,"rose"],[640,60,14,"sky"],[470,150,12,"gold"],[600,170,10,"sage"]];
-const DESC_TXT="for completing the Level Up English Placement Test, Teens & Young Adults stage, and achieving the level shown.";
 
 function dateEN(){return new Date(S.ended||Date.now()).toLocaleDateString("en-US",{month:"long",day:"numeric",year:"numeric"})}
 function safeName(){return S.name.replace(/[\\/:*?"<>|]/g,"").trim()}
