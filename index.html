@@ -204,6 +204,8 @@ button:focus-visible,input:focus-visible{outline:3px solid var(--sand);outline-o
   .res .lvbox i:nth-of-type(4),.res .lvbox i:nth-of-type(5){display:none}
   .res .lvbox p{padding:0 6px}
   .res .sc b{font-size:18px;padding:2px 9px}
+  .res .sc{flex-direction:column;align-items:flex-start;justify-content:center;gap:7px;padding:12px 14px}
+  .res .sc small{font-size:14px;white-space:nowrap}
   .res .bigt{font-size:44px}
   .res .lvbox p{font-size:14px}
 }
@@ -1987,13 +1989,17 @@ async function drawStory(){
   underline(x,cx,622+nameH,Math.max(...lines.map(l=>x.measureText(l).width))+80,3);
   const rTop=622+nameH+3+38;rosette(x,390,rTop,300,code);
   const gTop=rTop+380+47;
+  let lf=32,bf=40;
+  for(;;){const fit=R.per.every(p=>{x.font=`700 ${bf}px Poppins, sans-serif`;const bw=x.measureText(LEVELS[p.lv].c).width+(bf*.8);
+      x.font=`600 ${lf}px Poppins, sans-serif`;return 31+x.measureText(p.sec.name).width+18+bw+28<=387});
+    if(fit)break;if(bf>32)bf-=2;else if(lf>22)lf-=1;else break;}
   R.per.forEach((p,i)=>{
     const l=140+(i%2)*410,t=gTop+Math.floor(i/2)*146,st=SEC_STYLE[p.sec.id];
     rrect(x,l+1.5,t+1.5,387,123,24.5);x.fillStyle="#fff";x.fill();x.lineWidth=3;x.strokeStyle=st.b;x.stroke();
-    x.fillStyle=INK;x.font='600 32px Poppins, sans-serif';x.textAlign="left";x.fillText(p.sec.name,l+31,t+74);
-    x.font='700 40px Poppins, sans-serif';const c=LEVELS[p.lv].c,bw=x.measureText(c).width+40;
+    const c=LEVELS[p.lv].c;x.font=`700 ${bf}px Poppins, sans-serif`;const bw=x.measureText(c).width+(bf*.8);
+    x.fillStyle=INK;x.font=`600 ${lf}px Poppins, sans-serif`;x.textAlign="left";x.fillText(p.sec.name,l+31,bl(t+1.5,123,lf));
     rrect(x,l+359-bw,t+29,bw,68,16);x.fillStyle=st.c;x.fill();
-    x.fillStyle="#fff";x.textAlign="center";x.fillText(c,l+359-bw/2,bl(t+29,68,40));
+    x.fillStyle="#fff";x.font=`700 ${bf}px Poppins, sans-serif`;x.textAlign="center";x.fillText(c,l+359-bw/2,bl(t+29,68,bf));
   });
   const dTop=gTop+272+40;x.fillStyle=DESC;x.font='400 29px Poppins, sans-serif';x.textAlign="center";
   wrapLines(x,DESC_TXT,800).forEach((l,i)=>x.fillText(l,cx,bl(dTop,43.5,29)+i*43.5));
