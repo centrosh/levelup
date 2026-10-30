@@ -652,7 +652,7 @@ function playSet(set,onEnd){
       if(!playing) return;
       if(i>=set.lines.length){mp3=null;onEnd();return}
       const first=i===0;
-      mp3=new Audio("audios/"+set.id+"-"+pad(i+1)+".mp3");i++;
+      mp3=new Audio(set.id+"-"+pad(i+1)+".mp3");i++;
       let started=false;
       mp3.onplaying=()=>{started=true};
       mp3.onended=()=>setTimeout(next,450);
@@ -662,7 +662,7 @@ function playSet(set,onEnd){
     };
     next();
   };
-  mp3=new Audio("audios/"+set.id+".mp3");
+  mp3=new Audio(set.id+".mp3");
   let started=false;
   mp3.onplaying=()=>{started=true};
   mp3.onended=()=>{mp3=null;onEnd()};
